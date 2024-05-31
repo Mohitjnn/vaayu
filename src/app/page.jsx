@@ -3,6 +3,33 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
+const newslist = [
+  {
+    id: 1,
+    title: "Yoga Competition",
+  },
+  {
+    id: 2,
+    title: "Art & Craft Competition",
+  },
+  {
+    id: 3,
+    title: "Handball Competition",
+  },
+  {
+    id: 4,
+    title: "BasketBall Competition",
+  },
+  {
+    id: 5,
+    title: "Football Competition",
+  },
+  {
+    id: 6,
+    title: "Creeda Handball League",
+  },
+];
+
 export default function Home() {
   const router = useRouter();
 
@@ -58,6 +85,25 @@ export default function Home() {
                 More
               </button>
             </div>
+          </div>
+        </section>
+        <section className="flex flex-col w-full px-20 mt-14">
+          <h1 className="Heading my-14">STAY UPDATED WITH ALL WE'RE DOING</h1>
+          <div className="flex flex-row gap-6 w-full overflow-y-auto h-[50vh] py-4 no-scrollbar">
+            {newslist.map((news) => (
+              <div className="flex flex-col">
+                <div className="w-[46vh] relative h-[50vh]">
+                  <Image
+                    src={`/newsletter${news.id}.png`}
+                    priority={true}
+                    fill={true}
+                    quality={100}
+                    className="object-cover"
+                  />
+                </div>
+                <p className="subHeading mt-4">{news.title}</p>
+              </div>
+            ))}
           </div>
         </section>
       </center>

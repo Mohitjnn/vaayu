@@ -1,13 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { Ubuntu } from "next/font/google";
 import Image from "next/image";
-
-const roboto = Ubuntu({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 const Links = [
   { name: "Home", url: "/" },
@@ -32,10 +26,10 @@ function Navbar() {
         <Image src="/logo.png" height={70} width={70} />
         <Link
           href="/"
-          className="subHeading font-[900]"
+          className="subHeading font-black"
           onClick={() => setActiveLink("/")}
         >
-          VAAYU INDIA
+          VAAYUN INDIA
         </Link>
       </div>
       <div className="flex space-x-20">
@@ -43,9 +37,7 @@ function Navbar() {
           <Link
             href={link.url}
             key={link.url}
-            className={`${
-              roboto.className
-            } subHeading font-extralight hover:underline underline-offset-4 ${
+            className={`subHeading font-extralight hover:underline underline-offset-4 ${
               activeLink === link.url ? "text-blue-500 underline" : ""
             }`}
             onClick={() => handleClick(link.url)}
