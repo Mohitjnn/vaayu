@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Ubuntu } from "next/font/google";
+import Image from "next/image";
 
 const roboto = Ubuntu({
   weight: "400",
@@ -25,21 +26,26 @@ function Navbar() {
 
   return (
     <div
-      className={` ${roboto.className} w-full flex justify-between items-center py-4 px-14  sticky top-0 z-30 h-fit bg-white`} // Ensure height and z-index
+      className="w-full flex justify-between items-center px-14 sticky top-0 z-30 h-fit bg-white" // Ensure height and z-index
     >
-      <Link
-        href="/"
-        className="Heading font-black"
-        onClick={() => setActiveLink("/")}
-      >
-        VAAYU INDIA
-      </Link>
+      <div className="flex justify-evenly items-center w-fit h-fit py-2 ">
+        <Image src="/logo.png" height={70} width={70} />
+        <Link
+          href="/"
+          className="subHeading font-[900]"
+          onClick={() => setActiveLink("/")}
+        >
+          VAAYU INDIA
+        </Link>
+      </div>
       <div className="flex space-x-20">
         {Links.map((link) => (
           <Link
             href={link.url}
             key={link.url}
-            className={`subHeading font-medium hover:underline underline-offset-4 ${
+            className={`${
+              roboto.className
+            } subHeading font-extralight hover:underline underline-offset-4 ${
               activeLink === link.url ? "text-blue-500 underline" : ""
             }`}
             onClick={() => handleClick(link.url)}
