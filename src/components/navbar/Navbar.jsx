@@ -25,17 +25,21 @@ function Navbar() {
 
   return (
     <div
-      className={` ${roboto.className} w-full flex justify-between items-center py-5 px-14  sticky top-0 z-10 h-fit bg-white`} // Ensure height and z-index
+      className={` ${roboto.className} w-full flex justify-between items-center py-4 px-14  sticky top-0 z-30 h-fit bg-white`} // Ensure height and z-index
     >
-      <Link href="/" className="Title" onClick={() => setActiveLink("/")}>
-        Vaayu India
+      <Link
+        href="/"
+        className="Heading font-black"
+        onClick={() => setActiveLink("/")}
+      >
+        VAAYU INDIA
       </Link>
       <div className="flex space-x-20">
         {Links.map((link) => (
           <Link
             href={link.url}
             key={link.url}
-            className={`subTitle font-medium hover:underline underline-offset-4 ${
+            className={`subHeading font-medium hover:underline underline-offset-4 ${
               activeLink === link.url ? "text-blue-500 underline" : ""
             }`}
             onClick={() => handleClick(link.url)}

@@ -6,15 +6,15 @@
 
   /* fonts */
   .Title {
-    @apply text-4xl font-extrabold;
+    @apply text-6xl font-extrabold;
   }
 
   .Heading {
-    @apply text-3xl font-bold;
+    @apply text-4xl font-bold;
   }
 
-  .subTitle {
-    @apply text-xl font-bold;
+  .subHeading {
+    @apply text-2xl font-bold;
   }
 
   .text {
