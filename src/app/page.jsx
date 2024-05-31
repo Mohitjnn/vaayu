@@ -45,7 +45,7 @@ export default function Home() {
               fill={true}
               priority={true}
               src="/homePageImage.png"
-              className="opacity-70 object-cover"
+              className="opacity-70 object-fit"
               alt="sportImage"
             />
             <div
@@ -68,9 +68,9 @@ export default function Home() {
             </div>
             <div className="flex flex-col w-2/3 justify-left text-pretty text-left">
               <p className="text-xl leading-loose font-medium">
-                <span className="font-semibold">VAAYU</span> is a sports academy
-                that aims to coach young children for a better dominated sports
-                culture in our country. Our focus is to train children in
+                <span className="font-semibold">VAAYUN</span> is a sports
+                academy that aims to coach young children for a better dominated
+                sports culture in our country. Our focus is to train children in
                 various fields of sports and fitness programmes during and after
                 school hours, as well as to prepare and guide them for
                 participation in state and national competitions. The sole aim
@@ -87,7 +87,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="flex flex-col w-full px-20 mt-14">
+        <section className="flex flex-col items-center w-full px-20 mt-14">
           <h1 className="Heading my-14">STAY UPDATED WITH ALL WE'RE DOING</h1>
           <div className="flex flex-row gap-6 w-full overflow-y-auto h-[50vh] py-4 no-scrollbar">
             {newslist.map((news) => (
@@ -97,7 +97,6 @@ export default function Home() {
                     src={`/newsletter${news.id}.png`}
                     priority={true}
                     fill={true}
-                    quality={100}
                     className="object-cover"
                   />
                 </div>
@@ -105,6 +104,12 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <button
+            className="Btnlight text mt-4"
+            onClick={() => router.push("/newsletter")}
+          >
+            BROWSE NEWSLETTER
+          </button>
         </section>
       </center>
     </main>
