@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+
+  /* fonts */
+  .Title {
+    @apply text-4xl font-extrabold;
+  }
+
+  .Heading {
+    @apply text-3xl font-bold;
+  }
+
+  .subTitle {
+    @apply text-xl font-bold;
+  }
+
+  .text {
+    @apply text-lg font-normal;
+  }
+
+
+}

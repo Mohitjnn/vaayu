@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import Link from "next/link";
 import { Ubuntu } from "next/font/google";
@@ -26,21 +25,17 @@ function Navbar() {
 
   return (
     <div
-      className={` ${roboto.className} w-full flex justify-between items-center my-10 px-14`}
+      className={` ${roboto.className} w-full flex justify-between items-center py-5 px-14  sticky top-0 z-10 h-fit bg-white`} // Ensure height and z-index
     >
-      <Link
-        href="/"
-        className="text-3xl font-bold"
-        onClick={() => setActiveLink("/")}
-      >
+      <Link href="/" className="Title" onClick={() => setActiveLink("/")}>
         Vaayu India
       </Link>
-      <div className="flex space-x-10">
+      <div className="flex space-x-20">
         {Links.map((link) => (
           <Link
             href={link.url}
             key={link.url}
-            className={`text-xl hover:underline underline-offset-4 ${
+            className={`subTitle font-medium hover:underline underline-offset-4 ${
               activeLink === link.url ? "text-blue-500 underline" : ""
             }`}
             onClick={() => handleClick(link.url)}

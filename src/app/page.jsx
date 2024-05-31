@@ -1,11 +1,18 @@
 import Image from "next/image";
-import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <center>Home</center>
+    <main>
+      <div className="">
+        <center className="w-full h-fit">
+          <div className="relative w-full" style={{ height: "140vh" }}>
+            <Image
+              fill={true}
+              src="/homePageImage.png"
+              className="opacity-80"
+            ></Image>
+          </div>
+        </center>
       </div>
     </main>
   );
