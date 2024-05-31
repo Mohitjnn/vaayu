@@ -1,6 +1,11 @@
+"use client";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <main>
       <center className="w-full h-fit">
@@ -28,7 +33,33 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full">section 2</section>
+        <section className="flex flex-col w-full px-20 mt-14">
+          <h1 className="Heading my-14">ABOUT US</h1>
+          <div className="flex w-full flex-row h-fit justify-center space-x-[5%]">
+            <div className="w-[50%] relative h-[58vh]">
+              <Image src="/AboutUsPicture.png" fill={true} />
+            </div>
+            <div className="flex flex-col w-2/3 justify-left text-pretty text-left">
+              <p className="text-xl leading-loose font-medium">
+                <span className="font-semibold">VAAYU</span> is a sports academy
+                that aims to coach young children for a better dominated sports
+                culture in our country. Our focus is to train children in
+                various fields of sports and fitness programmes during and after
+                school hours, as well as to prepare and guide them for
+                participation in state and national competitions. The sole aim
+                of our programme is to ensure that your school grows not only
+                academically but also makes a remarkable growth in the field of
+                sports and games, which can be acheived with our training.
+              </p>
+              <button
+                className="Btnlight text mt-4"
+                onClick={() => router.push("/about")}
+              >
+                More
+              </button>
+            </div>
+          </div>
+        </section>
       </center>
     </main>
   );

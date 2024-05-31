@@ -24,7 +24,7 @@
   /* btn */
 
   .Btnlight {
-    @apply text-white bg-blue-500 rounded-[30px] w-fit px-20 py-3 h-fit;
+    @apply text-white bg-blue-500 rounded-[30px] w-fit px-[7%] py-3 h-fit;
   }
 
 
