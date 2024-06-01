@@ -65,11 +65,30 @@ const aboutUsList1 = [
   },
 ];
 
-function About() {
+const achievements = [
+  {
+    title: "Junior Girls Team Representing India In Sweden (Partille Cup)",
+    description:
+      "Our junior girls team showcased their talent on an international stage at the Partille Cup in Sweden.",
+  },
+  {
+    title: "Boys Team Winning CBSE Zonals & Qualified For Nationals",
+    description:
+      "Our boys team emerged victorious in the CBSE Zonals, earning a spot in the National competition.",
+  },
+  {
+    title:
+      "Winners Of Multiple Handball Tournaments (U/10 & U/12 Boys & Girls)",
+    description:
+      "Our U/10 and U/12 boys and girls teams clinched multiple handball tournament titles.",
+  },
+];
+
+const About = () => {
   return (
-    <main>
+    <main className="w-full h-fit">
       <center className="w-full h-fit">
-        <section className="w-full flex flex-col px-14">
+        <section className="w-full flex flex-col mt-4 px-14">
           <div className="flex flex-row items-center w-full h-fit gap-8">
             <div className="w-[25%] h-fit flex flex-col justify-center items-start">
               <h1 className="Heading text-blue-500 font-bold pl-2">About Us</h1>
@@ -107,15 +126,42 @@ function About() {
         </section>
         <section className="w-full h-fit px-16 my-16 flex flex-col items-center">
           <h1 className="Heading">Why Choose Us</h1>
-          <div className="flex flex-row justify-start w-full overflow-x-auto h-full no-scrollbar">
+          <div className="flex flex-row justify-start w-full overflow-x-auto overflow-y-hidden h-full no-scrollbar">
             {aboutUsList1.map((reasons, index) => (
               <Datacard Reasons={reasons} key={index} />
             ))}
           </div>
         </section>
+        <section className="w-full h-fit px-16 flex flex-col items-center">
+          <h1 className="Heading font-bold mb-16">Achievements</h1>
+          {achievements.map((achievement, index) => (
+            <div
+              key={index}
+              className={`flex items-center justify-between px-16 w-full my-8 h-fit gap-8 ${
+                index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+              }`}
+            >
+              <div className="w-[60%] relative h-[48vh] overflow-visible group">
+                <Image
+                  src={`/Achievement${index + 1}.png`}
+                  fill={true}
+                  objectFit="contain"
+                  alt="Achievement"
+                  className="transition-transform duration-500 ease-in-out transform group-hover:scale-110"
+                />
+              </div>
+              <div className="w-fit space-y-8 flex flex-col">
+                <h1 className="Heading ">{achievement.title}</h1>
+                <p className="subHeading font-normal ">
+                  {achievement.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </section>
       </center>
     </main>
   );
-}
+};
 
 export default About;
