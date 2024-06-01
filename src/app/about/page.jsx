@@ -14,7 +14,7 @@ function About() {
                   src="/logo.png"
                   height={50}
                   width={50}
-                  className="object-cover"
+                  objectFit="cover"
                 />
                 <h1 className="subHeading font-black">VAAYUN INDIA</h1>
               </div>
@@ -31,7 +31,11 @@ function About() {
               can be acheived with our training.
             </p>
           </div>
+          <div className="justify-center w-[100%] relative h-[60vh] mt-4">
+            <Image src="/AboutUsPicture2.jpg" fill={true} objectFit="contain" />
+          </div>
         </section>
+        <section></section>
       </center>
     </main>
   );

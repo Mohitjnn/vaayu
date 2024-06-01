@@ -45,7 +45,8 @@ export default function Home() {
               fill={true}
               priority={true}
               src="/homePageImage.png"
-              className="opacity-70 object-fit"
+              objectFit="fill"
+              className="opacity-70"
               alt="sportImage"
             />
             <div
@@ -97,7 +98,7 @@ export default function Home() {
                     src={`/newsletter${news.id}.png`}
                     priority={true}
                     fill={true}
-                    className="object-cover"
+                    objectFit="cover"
                   />
                 </div>
                 <p className="subHeading mt-4">{news.title}</p>
