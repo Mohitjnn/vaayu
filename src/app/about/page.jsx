@@ -65,22 +65,28 @@ const aboutUsList1 = [
   },
 ];
 
-const achievements = [
+const Founders = [
   {
-    title: "Junior Girls Team Representing India In Sweden (Partille Cup)",
-    description:
-      "Our junior girls team showcased their talent on an international stage at the Partille Cup in Sweden.",
+    name: "Dhananjay Thakur",
+    Title: "CEO, CO-FOUNDER",
+    achievements: [
+      "Renowned player, coach, and mentor in handball.",
+      "Represented the Indian national handball team with pride.",
+      "Recognized with the India Sports Award for remarkable contributions.",
+      "Led his Maharashtra team to CBSE West Zonal Handball victory.",
+      "Known for exceptional leadership and strategic prowess.",
+    ],
   },
   {
-    title: "Boys Team Winning CBSE Zonals & Qualified For Nationals",
-    description:
-      "Our boys team emerged victorious in the CBSE Zonals, earning a spot in the National competition.",
-  },
-  {
-    title:
-      "Winners Of Multiple Handball Tournaments (U/10 & U/12 Boys & Girls)",
-    description:
-      "Our U/10 and U/12 boys and girls teams clinched multiple handball tournament titles.",
+    name: "Abhishek Pandey",
+    Title: "CFO, CO-FOUNDER",
+    achievements: [
+      "Renowned for representing the Indian handball team internationally.",
+      "Known for speed, strategy, and agility in national championships.",
+      "Recipient of the India Sports Award for handball excellence.",
+      "Exemplifies excellence, dedication, and passion for sports.",
+      "Inspires athletes, securing a place in Indian sports history.",
+    ],
   },
 ];
 
@@ -125,39 +131,38 @@ const About = () => {
           </div>
         </section>
         <section className="w-full h-fit px-16 my-16 flex flex-col items-center">
+          <h1 className="Heading">Founders</h1>
+          <div className="flex flex-row w-full h-fit my-16 justify-between items-start space-x-6">
+            {Founders.map((Founder, index) => (
+              <div className="flex flex-col w-1/2 items-center justify-center space-y-8">
+                <div className="w-[60vh] relative h-[70vh]">
+                  <Image
+                    src={`/Founder${index + 1}.png`}
+                    priority={true}
+                    fill={true}
+                    objectFit="cover"
+                  />
+                </div>
+                <div className="text-pretty w-full ">
+                  <h1 className="subHeading mb-4">{Founder.name}</h1>
+                  <h1 className="subHeading mb-4">{Founder.Title}</h1>
+                  <p className=" text w-full leading-loose">
+                    {Founder.achievements.map((achievement, index) => (
+                      <p key={index}>- {achievement}</p>
+                    ))}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className="w-full h-fit px-16 my-16 flex flex-col items-center">
           <h1 className="Heading">Why Choose Us</h1>
           <div className="flex flex-row justify-start w-full overflow-x-auto overflow-y-hidden h-full no-scrollbar">
             {aboutUsList1.map((reasons, index) => (
               <Datacard Reasons={reasons} key={index} />
             ))}
           </div>
-        </section>
-        <section className="w-full h-fit px-16 flex flex-col items-center">
-          <h1 className="Heading font-bold mb-16">Achievements</h1>
-          {achievements.map((achievement, index) => (
-            <div
-              key={index}
-              className={`flex items-center justify-between px-16 w-full my-8 h-fit gap-8 ${
-                index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-              }`}
-            >
-              <div className="w-[60%] relative h-[48vh] overflow-visible group">
-                <Image
-                  src={`/Achievement${index + 1}.png`}
-                  fill={true}
-                  objectFit="contain"
-                  alt="Achievement"
-                  className="transition-transform duration-500 ease-in-out transform group-hover:scale-110"
-                />
-              </div>
-              <div className="w-fit space-y-8 flex flex-col">
-                <h1 className="Heading ">{achievement.title}</h1>
-                <p className="subHeading font-normal ">
-                  {achievement.description}
-                </p>
-              </div>
-            </div>
-          ))}
         </section>
       </center>
     </main>

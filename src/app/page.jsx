@@ -30,6 +30,25 @@ const newslist = [
   },
 ];
 
+const achievements = [
+  {
+    title: "Junior Girls Team Representing India In Sweden (Partille Cup)",
+    description:
+      "Our junior girls team showcased their talent on an international stage at the Partille Cup in Sweden.",
+  },
+  {
+    title: "Boys Team Winning CBSE Zonals & Qualified For Nationals",
+    description:
+      "Our boys team emerged victorious in the CBSE Zonals, earning a spot in the National competition.",
+  },
+  {
+    title:
+      "Winners Of Multiple Handball Tournaments (U/10 & U/12 Boys & Girls)",
+    description:
+      "Our U/10 and U/12 boys and girls teams clinched multiple handball tournament titles.",
+  },
+];
+
 export default function Home() {
   const router = useRouter();
 
@@ -111,6 +130,33 @@ export default function Home() {
           >
             BROWSE NEWSLETTER
           </button>
+        </section>
+        <section className="w-full mt-16 h-fit px-16 flex flex-col items-center">
+          <h1 className="Heading font-bold mb-16">Achievements</h1>
+          {achievements.map((achievement, index) => (
+            <div
+              key={index}
+              className={`flex items-center justify-between px-16 w-full my-8 h-fit gap-8 ${
+                index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+              }`}
+            >
+              <div className="w-[60%] relative h-[48vh] overflow-visible group">
+                <Image
+                  src={`/Achievement${index + 1}.png`}
+                  fill={true}
+                  objectFit="contain"
+                  alt="Achievement"
+                  className="transition-transform duration-500 ease-in-out transform group-hover:scale-110"
+                />
+              </div>
+              <div className="w-fit space-y-8 flex flex-col">
+                <h1 className="Heading ">{achievement.title}</h1>
+                <p className="subHeading font-normal ">
+                  {achievement.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </section>
       </center>
     </main>
