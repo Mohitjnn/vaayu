@@ -7,29 +7,23 @@ function Footer() {
       <div className="flex flex-col items-center justify-evenly w-fit h-fit space-y-3 px-16">
         <Image src="/logoWhite.png" height={10} width={60} />
         <h1 className="subHeading">VAAYUN INDIA</h1>
-        <div className="text text-center">
+        <div className="text text-center opacity-65">
           <p>Designed and Developed by</p>
           <p>Mohit Jain</p>
           <p className="text-lg">@2024|Vaayun|All Rights Reserved</p>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-evenly w-fit h-fit space-y-3 px-16">
+      <div className="flex flex-col items-start justify-evenly w-fit h-fit space-y-3 px-16">
         <h1 className="subHeading">Contact</h1>
-        <div className="text text-center">
-          <p>
-            <span className="font-semibold px-2">Email:</span>
-            Creedaindiasports@gmail.com
-          </p>
-          <div className="flex flex-row justify-start w-full items-center">
-            <span className="font-semibold px-2">Phone:</span>
-            <p>+91 8689890988</p>
-            <p className="ml-3">+91 8291724184</p>
-          </div>
+        <div className="text text-start space-y-3 opacity-65">
+          <p>Creedaindiasports@gmail.com</p>
+          <p>+91 8689890988</p>
+          <p>+91 8291724184</p>
         </div>
       </div>
       <div className="flex flex-col items-center justify-evenly w-fit h-fit space-y-3 px-16">
         <h1 className="subHeading">Socials</h1>
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 opacity-65">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
