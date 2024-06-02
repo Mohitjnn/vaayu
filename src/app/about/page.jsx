@@ -146,17 +146,17 @@ const About = () => {
                 <div className="text-pretty w-full ">
                   <h1 className="subHeading mb-4">{Founder.name}</h1>
                   <h1 className="subHeading mb-4">{Founder.Title}</h1>
-                  <p className=" text w-full leading-loose">
+                  <div className=" text w-full leading-loose">
                     {Founder.achievements.map((achievement, index) => (
                       <p key={index}>- {achievement}</p>
                     ))}
-                  </p>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </section>
-        <section className="w-full h-fit px-16 my-16 flex flex-col items-center">
+        <section className="w-full h-fit px-12 my-16 flex flex-col items-center">
           <h1 className="Heading">Why Choose Us</h1>
           <div className="flex flex-row justify-start w-full overflow-x-auto overflow-y-hidden h-full no-scrollbar">
             {aboutUsList1.map((reasons, index) => (
