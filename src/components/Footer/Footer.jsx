@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 function Footer() {
   return (
-    <div className="w-full bg-blue-500 mt-8 h-fit px-14 py-4 bottom-0 flex justify-between items-center">
+    <div className="w-full bg-blue-500 mt-8 h-full px-14 py-14 bottom-0 flex justify-between items-center">
       <div className="flex flex-col items-center justify-evenly w-fit h-fit space-y-3 px-16">
         <Image src="/logoWhite.png" height={10} width={60} />
         <h1 className="subHeading">VAAYUN INDIA</h1>
@@ -13,7 +13,7 @@ function Footer() {
           <p className="text-lg">@2024|Vaayun|All Rights Reserved</p>
         </div>
       </div>
-      <div className="flex flex-col items-start justify-evenly w-fit h-fit space-y-3 px-16">
+      <div className="flex flex-col items-start w-fit h-full space-y-3 px-16">
         <h1 className="subHeading">Contact</h1>
         <div className="text text-start space-y-3 opacity-65">
           <p>Creedaindiasports@gmail.com</p>

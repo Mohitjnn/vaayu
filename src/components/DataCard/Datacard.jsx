@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Datacard({ Reasons }) {
   return (
-    <div className="flex flex-col items-center h-full w-fit m-16 transition-transform duration-300 ease-in-out transform hover:scale-110 overflow-visible">
+    <div className="flex flex-col items-center h-full w-full m-16 transition-transform duration-300 ease-in-out transform hover:scale-110 overflow-visible">
       <div className="w-[50vh] h-[50vh] relative ">
         <Image
           src={`/whyUs${Reasons.id}.png`}

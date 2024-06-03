@@ -141,6 +141,7 @@ const About = () => {
                     priority={true}
                     fill={true}
                     objectFit="cover"
+                    alt={Founder.name}
                   />
                 </div>
                 <div className="text-pretty w-full ">
