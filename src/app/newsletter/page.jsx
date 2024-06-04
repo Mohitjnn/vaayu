@@ -7,8 +7,10 @@ import useAxios from "../../customHook/useAxios";
 function Newsletter() {
   const { response, error } = useAxios();
 
-  if (error) return <div>Error: {error}</div>;
-  if (!response) return <div>Loading...</div>;
+  if (error)
+    return <div className="Title w-full text-center py-4">Error: {error}</div>;
+  if (!response)
+    return <div className="Title w-full text-center py-4">Loading...</div>;
 
   return (
     <main className="w-full h-fit">
