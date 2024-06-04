@@ -121,7 +121,7 @@ const About = () => {
             ))}
           </div>
         </section>
-        <section className="w-full h-fit px-12 my-16 flex flex-col items-center">
+        <section className="w-full h-fit px-12 space-y-4  flex flex-col items-center ">
           <h1 className="Heading">Why Choose Us</h1>
           <div
             className="flex flex-row justify-start w-full overflow-x-hidden h-full no-scrollbar"
@@ -131,7 +131,7 @@ const About = () => {
               <Datacard Reasons={reasons} key={index} />
             ))}
           </div>
-          <div className="flex flex-row justify-center space-x-4 w-full h-fit py-4">
+          <div className="flex flex-row justify-center space-x-4 w-full h-fit">
             <button onClick={scrollLeft}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
