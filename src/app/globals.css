@@ -43,6 +43,11 @@
     @apply text-white bg-blue-500 rounded-[30px] w-fit px-[7%] py-3 h-fit;
   }
 
+  /* form */
+
+  .input {
+    @apply border-2 border-gray-500 rounded-md h-fit p-5 outline-none w-[100%]
+  }
 
 
 
