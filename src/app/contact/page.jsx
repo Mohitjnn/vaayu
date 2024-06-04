@@ -27,9 +27,9 @@ function Contact() {
         <section className="flex flex-row w-full h-full justify-between items-start space-x-6">
           <div className="w-[45%] relative h-[90vh] bg-custom-gradient rounded-br-[20%] my-5  ">
             <Image
-              src="/contactUsimg.png"
+              src="/contactUsImg.png"
               fill={true}
-              objectFit="fill"
+              objectFit="cover"
               quality={100}
               priority={true}
             />
@@ -61,7 +61,6 @@ function Contact() {
               </button>
             </div>
             <Form1 />
-
             <div className="flex w-full justify-between">
               <h1 className="Title text-blue-500">Join Us</h1>
               <button

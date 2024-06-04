@@ -2,54 +2,14 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-
-const newslist = [
-  {
-    id: 1,
-    title: "Yoga Competition",
-  },
-  {
-    id: 2,
-    title: "Art & Craft Competition",
-  },
-  {
-    id: 3,
-    title: "Handball Competition",
-  },
-  {
-    id: 4,
-    title: "BasketBall Competition",
-  },
-  {
-    id: 5,
-    title: "Football Competition",
-  },
-  {
-    id: 6,
-    title: "Creeda Handball League",
-  },
-];
-
-const achievements = [
-  {
-    title: "Junior Girls Team Representing India In Sweden (Partille Cup)",
-    description:
-      "Our junior girls team showcased their talent on an international stage at the Partille Cup in Sweden.",
-  },
-  {
-    title: "Boys Team Winning CBSE Zonals & Qualified For Nationals",
-    description:
-      "Our boys team emerged victorious in the CBSE Zonals, earning a spot in the National competition.",
-  },
-  {
-    title:
-      "Winners Of Multiple Handball Tournaments (U/10 & U/12 Boys & Girls)",
-    description:
-      "Our U/10 and U/12 boys and girls teams clinched multiple handball tournament titles.",
-  },
-];
+import useAxios from "./customHook/useAxios";
 
 export default function Home() {
+  const { response, error } = useAxios();
+
+  if (error) return <div>Error: {error}</div>;
+  if (!response) return <div>Loading...</div>;
+
   const router = useRouter();
 
   return (
@@ -109,12 +69,12 @@ export default function Home() {
         </section>
         <section className="flex flex-col items-center w-full px-20 mt-14">
           <h1 className="Heading my-14">STAY UPDATED WITH ALL WE'RE DOING</h1>
-          <div className="flex flex-row gap-6 w-full overflow-y-auto h-[50vh] py-4 no-scrollbar">
-            {newslist.map((news) => (
+          <div className="flex flex-row gap-6 w-full overflow-y-auto h-full py-4 no-scrollbar">
+            {response.newsletterContent.map((news) => (
               <div className="flex flex-col">
-                <div className="w-[46vh] relative h-[50vh]">
+                <div className="w-[46vh] relative h-[46vh]">
                   <Image
-                    src={`/newsletter${news.id}.png`}
+                    src={`${news.imageSrc}`}
                     priority={true}
                     fill={true}
                     objectFit="cover"
@@ -133,7 +93,7 @@ export default function Home() {
         </section>
         <section className="w-full mt-16 h-fit px-16 flex flex-col items-center">
           <h1 className="Heading font-bold mb-16">Achievements</h1>
-          {achievements.map((achievement, index) => (
+          {response.achievements.map((achievement, index) => (
             <div
               key={index}
               className={`flex items-center justify-between px-16 w-full my-8 h-fit gap-8 ${
