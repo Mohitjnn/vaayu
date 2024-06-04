@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import useAxios from "./customHook/useAxios";
+import useAxios from "../customHook/useAxios";
 
 export default function Home() {
   const { response, error } = useAxios();

@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Datacard from "@/components/DataCard/Datacard";
-import useAxios from "../customHook/useAxios";
+import useAxios from "../../customHook/useAxios";
 
 const About = () => {
   const { response, error } = useAxios();

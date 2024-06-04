@@ -2,7 +2,7 @@
 
 import React from "react";
 import NewsContent from "@/components/NewsLetterContent/newsContent";
-import useAxios from "../customHook/useAxios";
+import useAxios from "../../customHook/useAxios";
 
 function Newsletter() {
   const { response, error } = useAxios();
