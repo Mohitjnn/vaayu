@@ -50,15 +50,8 @@ export default function Home() {
             </div>
             <div className="flex flex-col w-2/3 justify-left text-pretty text-left">
               <p className="text-xl leading-loose font-medium">
-                <span className="font-semibold">VAAYUN</span> is a sports
-                academy that aims to coach young children for a better dominated
-                sports culture in our country. Our focus is to train children in
-                various fields of sports and fitness programmes during and after
-                school hours, as well as to prepare and guide them for
-                participation in state and national competitions. The sole aim
-                of our programme is to ensure that your school grows not only
-                academically but also makes a remarkable growth in the field of
-                sports and games, which can be acheived with our training.
+                <span className="font-semibold">VAAYUN</span>
+                {response.desc.homePage}
               </p>
               <button
                 className="Btnlight text mt-4"
