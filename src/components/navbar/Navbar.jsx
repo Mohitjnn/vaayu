@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Links = [
   { name: "Home", url: "/" },
@@ -12,21 +13,21 @@ const Links = [
 ];
 
 function Navbar() {
-  const [activeLink, setActiveLink] = useState(""); // Track clicked link
+  const pathname = usePathname();
+  const [activeLink, setActiveLink] = useState(pathname);
 
-  const handleClick = (url) => {
-    setActiveLink(url);
-  };
+  useEffect(() => {
+    setActiveLink(pathname);
+  }, [pathname]);
 
   return (
-    <div
-      className="w-full flex justify-between items-center px-14 sticky top-0 z-30 h-fit bg-white" // Ensure height and z-index
-    >
-      <div className="flex justify-evenly items-center w-fit h-fit py-2 ">
-        <Image src="/logo.png" height={70} width={70} />
+    <div className="w-full flex justify-between items-center px-14 sticky top-0 z-30 h-fit bg-white">
+      <div className="flex justify-evenly items-center w-fit h-fit py-2">
+        <Image src="/logo.png" height={70} width={70} alt="VAAYUN logo" />
         <Link
           href="/"
-          className="subHeading font-black"
+          className="subHeading font-black 
+            "
           onClick={() => setActiveLink("/")}
         >
           VAAYUN INDIA
@@ -40,7 +41,7 @@ function Navbar() {
             className={`subHeading font-extralight hover:underline underline-offset-4 ${
               activeLink === link.url ? "text-blue-500 underline" : ""
             }`}
-            onClick={() => handleClick(link.url)}
+            onClick={() => setActiveLink(link.url)}
           >
             {link.name}
           </Link>

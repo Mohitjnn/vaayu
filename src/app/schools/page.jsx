@@ -1,7 +1,24 @@
+import Link from "next/link";
 import React from "react";
 
 function schools() {
-  return <div>schools</div>;
+  return (
+    <main className="w-full h-full ">
+      <center className="w-full p-16 flex flex-col items-start space-y-6">
+        <h1 className="Title">GOOD NEWS</h1>
+        <p className="Heading">We now provide coaches to schools as well</p>
+        <p className="Heading">
+          for more information or enquiries:
+          <Link
+            href="/contact"
+            className="Heading px-3 font-extralight hover:underline underline-offset-4"
+          >
+            Contact Us
+          </Link>
+        </p>
+      </center>
+    </main>
+  );
 }
 
 export default schools;
