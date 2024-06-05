@@ -1,6 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
-import { basicSchema } from "@/schemas";
+import { basicSchema1 } from "@/schemas";
 
 const onSubmit = async (values, actions) => {
   console.log(values);
@@ -18,7 +18,7 @@ function Form1() {
         Phonenumber: "",
         desc: "",
       },
-      validationSchema: basicSchema,
+      validationSchema: basicSchema1,
       onSubmit,
     });
 

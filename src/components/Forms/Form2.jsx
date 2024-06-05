@@ -1,6 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
-import { basicSchema } from "@/schemas";
+import { basicSchema2 } from "@/schemas";
 
 const onSubmit = async (values, actions) => {
   console.log(values);
@@ -19,7 +19,7 @@ function Form2() {
         Experience: "",
         desc: "",
       },
-      validationSchema: basicSchema,
+      validationSchema: basicSchema2,
       onSubmit,
     });
 
