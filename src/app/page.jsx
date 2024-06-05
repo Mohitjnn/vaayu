@@ -47,6 +47,7 @@ export default function Home() {
                 objectFit="contain"
                 fill={true}
                 className="px-4 xl:px-0"
+                alt="about us picture"
               />
             </div>
             <div className="flex flex-col px-4 my-10 xl:my-0 xl:p-0 xl:w-2/3 justify-between items-center xl:items-start xl:justify-left text-justify xl:text-left">
@@ -69,13 +70,14 @@ export default function Home() {
           </h1>
           <div className="flex flex-row gap-6 w-full overflow-y-auto h-full py-4 no-scrollbar">
             {response.newsletterContent.map((news) => (
-              <div className="flex flex-col">
+              <div className="flex flex-col" key={news.title}>
                 <div className="w-[46vh] relative h-[46vh]">
                   <Image
                     src={`${news.imageSrc}`}
                     priority={true}
                     fill={true}
                     objectFit="cover"
+                    alt={news.title}
                   />
                 </div>
                 <p className="subHeading mt-4">{news.title}</p>

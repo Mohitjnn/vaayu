@@ -4,10 +4,10 @@ import Image from "next/image";
 const NewsContent = ({ content, section }) => {
   return content
     .filter((item) => item.section === section)
-    .map((item, index) => (
+    .map((item) => (
       <>
         <div
-          key={index}
+          key={item.title}
           className={`w-full lg:w-[50%] xl:w-full h-[40vh] relative ${
             section === "center" ? "xl:h-[75vh]" : "xl:h-[45vh] "
           }`}
