@@ -34,7 +34,7 @@
   }
 
   .text {
-    @apply text-lg font-normal;
+    @apply text-lg md:text-xl font-normal;
   }
 
   /* btn */
@@ -46,7 +46,7 @@
   /* form */
 
   .input {
-    @apply border-2 border-gray-500 rounded-md h-fit p-5 outline-none w-[100%]
+    @apply border-2 border-gray-500 rounded-lg h-fit p-5 outline-none w-[100%]
   }
 
 

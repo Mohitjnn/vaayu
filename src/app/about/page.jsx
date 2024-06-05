@@ -60,12 +60,14 @@ const About = () => {
   };
 
   return (
-    <main className="w-full h-fit">
-      <center className="w-full h-fit">
-        <section className="w-full flex flex-col mt-4 px-14">
-          <div className="flex flex-row items-center w-full h-fit gap-8">
-            <div className="w-[25%] h-fit flex flex-col justify-center items-start">
-              <h1 className="Heading text-blue-500 font-bold pl-2">About Us</h1>
+    <main className="w-full h-full">
+      <center>
+        <section className="w-full flex flex-col mt-4 md:px-14">
+          <div className="flex lg:flex-row flex-col items-center w-full h-fit gap-8">
+            <div className="w-full lg:w-[25%] h-fit flex flex-col justify-center items-start space-y-4">
+              <h1 className="Title lg:Heading text-blue-500 font-bold xl:pl-2">
+                About Us
+              </h1>
               <div className="flex flex-row justify-between items-center">
                 <Image
                   src="/logo.png"
@@ -77,12 +79,12 @@ const About = () => {
                 <h1 className="subHeading font-black">VAAYUN INDIA</h1>
               </div>
             </div>
-            <p className="text w-fit text-left leading-loose">
+            <p className="text px-4 lg:px-0 w-fit lg:text-left text-justify leading-loose">
               <span className="font-semibold">VAAYUN INDIA </span>
               {response.desc.aboutUsPage}
             </p>
           </div>
-          <div className="justify-center w-full relative h-[60vh] mt-4">
+          <div className="justify-center hidden lg:block w-full lg:relative h-[60vh] lg:mt-4">
             <Image
               src="/AboutUsPicture2.jpg"
               fill={true}
@@ -91,15 +93,15 @@ const About = () => {
             />
           </div>
         </section>
-        <section className="w-full h-fit px-16 my-16 flex flex-col items-center">
-          <h1 className="Heading">Founders</h1>
-          <div className="flex flex-row w-full h-fit my-16 justify-between items-start space-x-6">
+        <section className="w-full h-fit lg:px-16 my-16 flex flex-col items-center">
+          <h1 className="Title md:Heading">Founders</h1>
+          <div className="flex lg:flex-row flex-col w-full h-fit my-16 justify-between items-start space-y-16 lg:space-y-0 lg:space-x-6">
             {response.Founders.map((Founder, index) => (
               <div
-                className="flex flex-col w-1/2 items-center justify-center space-y-8"
+                className="flex flex-col w-screen lg:w-1/2 px-8 lg:px-0 items-center justify-center space-y-8"
                 key={index}
               >
-                <div className="w-[60vh] relative h-[70vh]">
+                <div className="w-full lg:w-[60vh] relative h-[70vh] px-6 ">
                   <Image
                     src={`/Founder${index + 1}.png`}
                     priority={true}
@@ -121,17 +123,17 @@ const About = () => {
             ))}
           </div>
         </section>
-        <section className="w-full h-fit px-12 space-y-4  flex flex-col items-center ">
-          <h1 className="Heading">Why Choose Us</h1>
+        <section className="w-full h-fit px-4 md:px-12 space-y-4 flex flex-col items-center ">
+          <h1 className="Title md:Heading">Why Choose Us</h1>
           <div
-            className="flex flex-row justify-start w-full overflow-x-hidden h-full no-scrollbar"
+            className="flex flex-row justify-start w-full overflow-x-auto lg:pt-8 lg:overflow-x-hidden h-full no-scrollbar"
             ref={formContainerRef}
           >
             {response.aboutUsList1.map((reasons, index) => (
               <Datacard Reasons={reasons} key={index} />
             ))}
           </div>
-          <div className="flex flex-row justify-center space-x-4 w-full h-fit">
+          <div className="hidden lg:flex flex-row justify-center space-x-4 w-full h-fit">
             <button onClick={scrollLeft}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

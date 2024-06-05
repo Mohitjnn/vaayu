@@ -50,7 +50,7 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col px-4 my-10 lg:my-0 lg:p-0 lg:w-2/3 justify-between items-center lg:items-start lg:justify-left text-justify lg:text-left">
-              <p className="text-lg lg:text-xl leading-relaxed lg:leading-loose font-medium">
+              <p className="text-lg md:text-xl leading-relaxed md:leading-loose font-medium">
                 <span className="font-semibold">VAAYUN</span>
                 {response.desc.homePage}
               </p>
