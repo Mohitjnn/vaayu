@@ -8,15 +8,15 @@ const NewsContent = ({ content, section }) => {
       <>
         <div
           key={index}
-          className={`w-full h-[40vh] relative ${
+          className={`w-full lg:w-[50%] xl:w-full h-[40vh] relative ${
             section === "center" ? "xl:h-[75vh]" : "xl:h-[45vh] "
           }`}
         >
           <Image
             src={item.imageSrc}
             fill={true}
-            objectFit="cover"
             alt={item.title}
+            className="object-contain xl:object-cover"
           />
         </div>
         <h1 className="Title xl:Heading text-center ">{item.title}</h1>
