@@ -12,7 +12,7 @@ const onSubmit = (values, actions) => {
 
   // try {
   fetch(
-    "https://script.google.com/macros/s/AKfycbzRIflY-91nMhDHiOUMRdC7gsBG3vVXNG3PrK20Tiu8bBquVVAqhfOhYXw5qyEkI9Po/exec",
+    "https://script.google.com/macros/s/AKfycbyX9DnxXzIxHHqbwVTYP7qLJyxzUW1e_l1n9usBgYkxbVoEx1mhyYmRo6K7zcnIG1ze/exec",
     { method: "POST", body: formData }
   )
     .then((response) => response.json())
