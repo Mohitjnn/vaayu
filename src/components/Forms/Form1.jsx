@@ -6,7 +6,7 @@ import axios from "axios";
 const onSubmit = async (values, actions) => {
   try {
     const response = await axios.post(
-      "https://script.google.com/macros/s/AKfycbz_EXuj2NIb3u_2yJtd7KFMuz5uULbxTEgfxEiM8FQFVBDSpgCwmJU3CXodqaQSD7Rk/exec",
+      "https://script.google.com/macros/s/AKfycbzGNTisaCcNDHAagejEccstTNHtaXpDbiKIW3MZmVP-Aye-JPZ_1fQjwckm4JOVoPma/exec",
       values // Send form values directly
     );
 
