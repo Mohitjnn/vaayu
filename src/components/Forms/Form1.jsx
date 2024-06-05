@@ -6,13 +6,13 @@ import axios from "axios";
 const onSubmit = async (values, actions) => {
   try {
     const response = await axios.post(
-      "https://script.google.com/macros/s/AKfycbzTXVx61qIdmozCwHJfaJOZgm-zX4v3WvzhLmaf1O2bPhZ4LSfkv0nyycIukA-RXE8/exec", // Replace with your Google Apps Script web app URL
+      "https://script.google.com/macros/s/AKfycbxndBzC6bPhgeU_iUhub99iVRm2v2YcPuCgcAvWfUk9thD2clxPwaRBvyI7iwuz4Ts/exec", // Replace with your Google Apps Script URL
       new URLSearchParams({
         "Full Name": values.name,
         Email: values.email,
         "Phone Number": values.phone,
         Message: values.message,
-      }), // URLSearchParams to encode the data properly
+      }),
       {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
@@ -22,11 +22,14 @@ const onSubmit = async (values, actions) => {
 
     if (response.status === 200) {
       console.log("Form data successfully sent!");
+      // You can also display a success message to the user here
     } else {
       console.error("Error sending form data:", response.statusText);
+      // Handle errors by displaying an error message to the user
     }
   } catch (error) {
     console.error("Error sending form data:", error);
+    // Handle errors by displaying an error message to the user
   }
 
   // Reset form after submission
