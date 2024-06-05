@@ -4,20 +4,10 @@ import { basicSchema1 } from "@/schemas";
 import axios from "axios";
 
 const onSubmit = async (values, actions) => {
-  const formData = new FormData();
-  for (const key in values) {
-    formData.append(key, values[key]);
-  }
-
   try {
     const response = await axios.post(
       "https://script.google.com/macros/s/AKfycbwtU39ebslmEF1wYUsovcMysY7FYqET7rAzZh-SOZ9VHkDMDtfVg2DN1R1QtX74hDJP/exec",
-      formData,
-      {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      }
+      values // Send form values directly
     );
 
     if (response.status === 200) {
@@ -27,9 +17,10 @@ const onSubmit = async (values, actions) => {
     }
   } catch (error) {
     console.error("Error sending form data:", error);
+    // You can handle errors here, e.g., display a message to the user
   }
 
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  // Reset form after submission
   actions.resetForm();
 };
 
