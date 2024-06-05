@@ -2,46 +2,34 @@ import React from "react";
 import { useFormik } from "formik";
 import { basicSchema1 } from "@/schemas";
 import axios from "axios";
-import { data } from "autoprefixer";
 
-const onSubmit = (values, actions) => {
+const onSubmit = async (values, actions) => {
   const formData = new FormData();
   for (const key in values) {
     formData.append(key, values[key]);
   }
 
-  // try {
-  fetch(
-    "https://script.google.com/macros/s/AKfycbyX9DnxXzIxHHqbwVTYP7qLJyxzUW1e_l1n9usBgYkxbVoEx1mhyYmRo6K7zcnIG1ze/exec",
-    { method: "POST", body: formData }
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-  // const response = await axios.post(
-  //   "https://script.google.com/macros/s/AKfycbzRIflY-91nMhDHiOUMRdC7gsBG3vVXNG3PrK20Tiu8bBquVVAqhfOhYXw5qyEkI9Po/exec",
-  //   formData,
-  //   {
-  //     headers: {
-  //       "Content-Type": "multipart/form-data",
-  //     },
-  //   }
-  // );
+  try {
+    const response = await axios.post(
+      "https://script.google.com/macros/s/AKfycbyo9XexoJcovOpiTFuIDjvCxJPgLlsNg2ZhabdYwlKCZ1LxkfWGrqHQkJvyf2mBgbG1/exec",
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
 
-  //   if (response.status === 200) {
-  //     console.log("Form data successfully sent!");
-  //   } else {
-  //     console.error("Error sending form data:", response.statusText);
-  //   }
-  // } catch (error) {
-  //   console.error("Error sending form data:", error);
-  // }
+    if (response.status === 200) {
+      console.log("Form data successfully sent!");
+    } else {
+      console.error("Error sending form data:", response.statusText);
+    }
+  } catch (error) {
+    console.error("Error sending form data:", error);
+  }
 
-  // await new Promise((resolve) => setTimeout(resolve, 1000));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   actions.resetForm();
 };
 
