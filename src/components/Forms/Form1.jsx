@@ -6,13 +6,8 @@ import axios from "axios";
 const onSubmit = async (values, actions) => {
   try {
     const response = await axios.post(
-      "https://script.google.com/macros/s/AKfycbxMHEx8FDvI5twdZ4C_T1D_FfexeAIBBukWh02T4io3IRsaIngftb1ysnyBK79sFNaT/exec",
-      values,
-      {
-        headers: {
-          "Content-Type": "text/plain;charset=utf-8",
-        },
-      } // Send form values directly
+      "https://script.google.com/macros/s/AKfycbz_EXuj2NIb3u_2yJtd7KFMuz5uULbxTEgfxEiM8FQFVBDSpgCwmJU3CXodqaQSD7Rk/exec",
+      values // Send form values directly
     );
 
     if (response.status === 200) {
@@ -22,7 +17,6 @@ const onSubmit = async (values, actions) => {
     }
   } catch (error) {
     console.error("Error sending form data:", error);
-    // You can handle errors here, e.g., display a message to the user
   }
 
   // Reset form after submission
