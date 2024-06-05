@@ -23,7 +23,12 @@ function Navbar() {
   return (
     <div className="w-full flex justify-between items-center px-14 sticky top-0 z-30 h-fit bg-white">
       <div className="flex justify-evenly items-center w-fit h-fit py-2">
-        <Image src="/logo.png" height={70} width={70} alt="VAAYUN logo" />
+        <Image
+          src="/static/images/logo.png"
+          height={70}
+          width={70}
+          alt="VAAYUN logo"
+        />
         <Link
           href="/"
           className="subHeading font-black 
