@@ -2,51 +2,61 @@
   "aboutUsList1": [
     {
       "id": 1,
+      "imageSrc": "/whyUs1.png",
       "Title": "Needs Assessment",
       "Description": "We conduct a thorough needs assessment to understand your school's specific requirements and goals."
     },
     {
       "id": 2,
+      "imageSrc": "/whyUs2.png",
       "Title": "Tailored Curriculum",
       "Description": "We design a customized curriculum that aligns with your school's objectives and students' needs."
     },
     {
       "id": 3,
+      "imageSrc": "/whyUs3.png",
       "Title": "Age-Appropriate Programs",
       "Description": "Our programs are designed to be age-appropriate, ensuring engagement and progress for all students."
     },
     {
       "id": 4,
+      "imageSrc": "/whyUs4.png",
       "Title": "Skill Development",
       "Description": "We focus on developing fundamental and advanced skills based on students' proficiency levels."
     },
     {
       "id": 5,
+      "imageSrc": "/whyUs5.png",
       "Title": "Progress Monitoring",
       "Description": "We monitor each student's progress through regular assessments and feedback sessions."
     },
     {
       "id": 6,
+      "imageSrc": "/whyUs6.png",
       "Title": "Individualized Attention",
       "Description": "Our program prioritizes individualized attention to provide personalized feedback and support."
     },
     {
       "id": 7,
+      "imageSrc": "/whyUs7.png",
       "Title": "Flexibility & Adaptability",
       "Description": "We offer a flexible program that adapts to changes in student needs, interests, and schedules."
     },
     {
       "id": 8,
+      "imageSrc": "/whyUs8.png",
       "Title": "Inclusion and Diversity",
       "Description": "Our program embraces inclusion and caters to students of various abilities and backgrounds."
     },
     {
       "id": 9,
+      "imageSrc": "/whyUs9.png",
       "Title": "Collaboration with School Staff",
       "Description": "We collaborate with your school's staff to ensure alignment with the overall curriculum."
     },
     {
       "id": 10,
+      "imageSrc": "/whyUs10.png",
       "Title": "Progress Reporting",
       "Description": "We provide periodic progress reports highlighting students' achievements and growth."
     }

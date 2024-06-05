@@ -6,7 +6,7 @@ function Datacard({ Reasons }) {
     <div className="flex flex-col h-fit w-full mx-10 ml-0 md:ml-16 lg:mx-16 my-4 transition-transform duration-300 ease-in-out transform hover:scale-110">
       <div className="w-[50vh] h-[45vh] md:h-[50vh] relative ">
         <Image
-          src={`/whyUs${Reasons.id}.png`}
+          src={`${Reasons.imageSrc}`}
           fill={true}
           objectFit="contain"
           alt={Reasons.Title}
