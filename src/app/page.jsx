@@ -6,13 +6,12 @@ import useAxios from "../customHook/useAxios";
 
 export default function Home() {
   const { response, error } = useAxios();
+  const router = useRouter();
 
   if (error)
     return <div className="Title w-full text-center py-4">Error: {error}</div>;
   if (!response)
     return <div className="Title w-full text-center py-4">Loading...</div>;
-
-  const router = useRouter();
 
   return (
     <main>
