@@ -3,31 +3,35 @@ import React from "react";
 import Image from "next/image";
 function Footer() {
   return (
-    <div className="w-full bg-blue-500 mt-8 h-full px-14 py-14 bottom-0 flex justify-between items-center">
-      <div className="flex flex-col items-center justify-evenly w-fit h-fit space-y-3 px-16">
-        <Image src="/static/images/logoWhite.png" height={10} width={60} />
-        <h1 className="subHeading">VAAYUN INDIA</h1>
-        <div className="text text-center opacity-65">
+    <div className="w-full bg-blue-500 mt-8  py-10 h-full xl:px-14 bottom-0 flex flex-col lg:flex-row justify-between items-center">
+      <div className="flex flex-col items-center justify-between w-fit h-fit space-y-6 lg:space-y-3 lg:px-16">
+        <Image src="/static/images/logoWhite.png" height={20} width={90} />
+        <h1 className="Title font-semibold lg:subHeading text-center">
+          VAAYUN INDIA
+        </h1>
+        <div className="Heading lg:text text-center font-normal opacity-65 px-4 space-y-4 lg:space-y-2 lg:py-2 py-4">
           <p>Designed and Developed by</p>
           <p>Mohit Jain</p>
-          <p className="text-lg">@2024|Vaayun|All Rights Reserved</p>
+          <p className="md:subHeading lg:text-lg font-normal text-center">
+            @2024|Vaayun|All Rights Reserved
+          </p>
         </div>
       </div>
-      <div className="flex flex-col items-start w-fit h-full space-y-3 px-16">
-        <h1 className="subHeading">Contact</h1>
-        <div className="text text-start space-y-3 opacity-65">
+      <div className="flex flex-col items-center lg:items-start lg:mt-16 w-fit h-full space-y-6 lg:space-y-3 px-16 py-8">
+        <h1 className="Title lg:subHeading">Contact</h1>
+        <div className=" Heading font-normal lg:text text-center lg:text-start space-y-6 lg:space-y-1 opacity-65">
           <p>Creedaindiasports@gmail.com</p>
           <p>+91 8689890988</p>
           <p>+91 8291724184</p>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-evenly w-fit h-fit space-y-3 px-16">
-        <h1 className="subHeading">Socials</h1>
+      <div className="flex flex-col items-center justify-evenly w-fit h-fit my-4 lg:my-2 space-y-3 px-16">
+        <h1 className="Title lg:subHeading">Socials</h1>
         <div className="flex items-center space-x-4 opacity-65">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
+            width="50"
+            height="50"
             viewBox="0 0 24 24"
             fill="none"
           >
@@ -38,8 +42,8 @@ function Footer() {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
+            width="50"
+            height="50"
             viewBox="0 0 24 24"
             fill="none"
           >
@@ -50,8 +54,8 @@ function Footer() {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
+            width="60"
+            height="60"
             viewBox="0 0 24 24"
           >
             <path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path>
