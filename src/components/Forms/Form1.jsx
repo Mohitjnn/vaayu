@@ -7,7 +7,12 @@ const onSubmit = async (values, actions) => {
   try {
     const response = await axios.post(
       "https://script.google.com/macros/s/AKfycbwtU39ebslmEF1wYUsovcMysY7FYqET7rAzZh-SOZ9VHkDMDtfVg2DN1R1QtX74hDJP/exec",
-      values // Send form values directly
+      values,
+      {
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
+      } // Send form values directly
     );
 
     if (response.status === 200) {
