@@ -70,7 +70,7 @@ const About = () => {
               </h1>
               <div className="flex flex-row justify-between items-center">
                 <Image
-                  src="/logo.png"
+                  src="/static/images/logo.png"
                   height={50}
                   width={50}
                   objectFit="cover"
@@ -86,7 +86,7 @@ const About = () => {
           </div>
           <div className="justify-center hidden xl:block w-full xl:relative h-[60vh] xl:mt-4">
             <Image
-              src="/AboutUsPicture2.jpg"
+              src="/static/images/AboutUsPicture2.jpg"
               fill={true}
               objectFit="contain"
               alt="About Us"

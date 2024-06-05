@@ -24,7 +24,7 @@ function Contact() {
         <section className="flex flex-col xl:flex-row w-full h-full justify-between items-start xl:space-x-6 xl:space-y-0">
           <div className="hidden md:block md:w-full xl:w-[45%] relative md:h-[45vh] xl:h-[90vh] bg-custom-gradient  xl:rounded-br-[20%] xl:my-5">
             <Image
-              src="/contactusimg.png"
+              src="/static/images/ContactUs.png"
               fill={true}
               objectFit="cover"
               quality={100}

@@ -21,7 +21,7 @@ export default function Home() {
             <Image
               fill={true}
               priority={true}
-              src="/homePageImage.png"
+              src="/static/images/homePageImage.png"
               className="opacity-70"
               alt="sportImage"
             />
@@ -42,7 +42,7 @@ export default function Home() {
           <div className="flex w-full xl:flex-row flex-col h-fit justify-center xl:space-x-[5%]">
             <div className="xl:w-[50%] px-4 relative h-[40vh] xl:h-[58vh]">
               <Image
-                src="/AboutUsPicture.png"
+                src="/static/images/AboutUsPicture.png"
                 objectFit="contain"
                 fill={true}
                 className="px-4 xl:px-0"

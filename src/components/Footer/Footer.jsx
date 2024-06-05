@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className="w-full bg-blue-500 mt-8 h-full px-14 py-14 bottom-0 flex justify-between items-center">
       <div className="flex flex-col items-center justify-evenly w-fit h-fit space-y-3 px-16">
-        <Image src="/logoWhite.png" height={10} width={60} />
+        <Image src="/static/images/logoWhite.png" height={10} width={60} />
         <h1 className="subHeading">VAAYUN INDIA</h1>
         <div className="text text-center opacity-65">
           <p>Designed and Developed by</p>
