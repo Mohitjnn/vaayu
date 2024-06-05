@@ -63,9 +63,9 @@ const About = () => {
     <main className="w-full h-full">
       <center>
         <section className="w-full flex flex-col mt-4 md:px-14">
-          <div className="flex lg:flex-row flex-col items-center w-full h-fit gap-8">
-            <div className="w-full lg:w-[25%] h-fit flex flex-col justify-center items-start space-y-4">
-              <h1 className="Title lg:Heading text-blue-500 font-bold xl:pl-2">
+          <div className="flex xl:flex-row flex-col items-center w-full h-fit gap-8">
+            <div className="w-full xl:w-[25%] h-fit flex flex-col justify-center items-start space-y-4">
+              <h1 className="Title xl:Heading text-blue-500 font-bold xl:pl-2">
                 About Us
               </h1>
               <div className="flex flex-row justify-between items-center">
@@ -79,12 +79,12 @@ const About = () => {
                 <h1 className="subHeading font-black">VAAYUN INDIA</h1>
               </div>
             </div>
-            <p className="text px-4 lg:px-0 w-fit lg:text-left text-justify leading-loose">
+            <p className="text px-4 xl:px-0 w-fit xl:text-left text-justify leading-loose">
               <span className="font-semibold">VAAYUN INDIA </span>
               {response.desc.aboutUsPage}
             </p>
           </div>
-          <div className="justify-center hidden lg:block w-full lg:relative h-[60vh] lg:mt-4">
+          <div className="justify-center hidden xl:block w-full xl:relative h-[60vh] xl:mt-4">
             <Image
               src="/AboutUsPicture2.jpg"
               fill={true}
@@ -93,27 +93,29 @@ const About = () => {
             />
           </div>
         </section>
-        <section className="w-full h-fit lg:px-16 my-16 flex flex-col items-center">
-          <h1 className="Title md:Heading">Founders</h1>
-          <div className="flex lg:flex-row flex-col w-full h-fit my-16 justify-between items-start space-y-16 lg:space-y-0 lg:space-x-6">
+        <section className="w-full h-fit xl:px-16 my-16 flex flex-col items-center">
+          <h1 className="Title xl:Heading">Founders</h1>
+          <div className="flex xl:flex-row flex-col w-full h-fit my-16 justify-between items-start space-y-16 xl:space-y-0 xl:space-x-6">
             {response.Founders.map((Founder, index) => (
               <div
-                className="flex flex-col w-screen lg:w-1/2 px-8 lg:px-0 items-center justify-center space-y-8"
+                className="flex flex-col w-screen xl:w-1/2 px-8 xl:px-0 items-center justify-center space-y-8"
                 key={index}
               >
-                <div className="w-full lg:w-[60vh] relative h-[70vh] px-6 ">
+                <div className="w-full xl:w-[60vh] relative h-[70vh] px-6 ">
                   <Image
                     src={`/Founder${index + 1}.png`}
                     priority={true}
                     fill={true}
-                    objectFit="cover"
+                    objectFit="contain"
                     alt={Founder.name}
                   />
                 </div>
                 <div className="text-pretty w-full ">
-                  <h1 className="subHeading mb-4">{Founder.name}</h1>
-                  <h1 className="subHeading mb-4">{Founder.Title}</h1>
-                  <div className="text w-full leading-loose">
+                  <h1 className="Heading xl:subHeading mb-4">{Founder.name}</h1>
+                  <h1 className="Heading xl:subHeading mb-4">
+                    {Founder.Title}
+                  </h1>
+                  <div className="subHeading font-normal leading-loose xl:text w-full ">
                     {Founder.achievements.map((achievement, idx) => (
                       <p key={idx}>- {achievement}</p>
                     ))}
@@ -123,17 +125,17 @@ const About = () => {
             ))}
           </div>
         </section>
-        <section className="w-full h-fit px-4 md:px-12 space-y-4 flex flex-col items-center ">
-          <h1 className="Title md:Heading">Why Choose Us</h1>
+        <section className="w-full h-fit px-4 lg:px-12 space-y-4 flex flex-col items-center ">
+          <h1 className="Title xl:Heading">Why Choose Us</h1>
           <div
-            className="flex flex-row justify-start w-full overflow-x-auto lg:pt-8 lg:overflow-x-hidden h-full no-scrollbar"
+            className="flex flex-row justify-start w-full overflow-x-auto xl:pt-8 xl:overflow-x-hidden h-full no-scrollbar"
             ref={formContainerRef}
           >
             {response.aboutUsList1.map((reasons, index) => (
               <Datacard Reasons={reasons} key={index} />
             ))}
           </div>
-          <div className="hidden lg:flex flex-row justify-center space-x-4 w-full h-fit">
+          <div className="hidden xl:flex flex-row justify-center space-x-4 w-full h-fit">
             <button onClick={scrollLeft}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
