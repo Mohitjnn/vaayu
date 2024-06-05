@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import NewsContent from "@/components/NewsLetterContent/newsContent";
+import NewsContent from "@/components/NewsLetterContent/NewsContent";
 import useAxios from "../../customHook/useAxios";
 
 function Newsletter() {

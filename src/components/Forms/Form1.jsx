@@ -1,10 +1,34 @@
 import React from "react";
 import { useFormik } from "formik";
 import { basicSchema1 } from "@/schemas";
+import axios from "axios";
 
 const onSubmit = async (values, actions) => {
-  console.log(values);
-  console.log(actions);
+  const formData = new FormData();
+  for (const key in values) {
+    formData.append(key, values[key]);
+  }
+
+  try {
+    const response = await axios.post(
+      "https://script.google.com/macros/s/AKfycbzRIflY-91nMhDHiOUMRdC7gsBG3vVXNG3PrK20Tiu8bBquVVAqhfOhYXw5qyEkI9Po/exec",
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
+
+    if (response.status === 200) {
+      console.log("Form data successfully sent!");
+    } else {
+      console.error("Error sending form data:", response.statusText);
+    }
+  } catch (error) {
+    console.error("Error sending form data:", error);
+  }
+
   await new Promise((resolve) => setTimeout(resolve, 1000));
   actions.resetForm();
 };
