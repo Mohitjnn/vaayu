@@ -65,11 +65,11 @@ export default function Home() {
         </section>
         <section className="flex flex-col items-center w-full px-5 xl:px-20 mt-14">
           <h1 className="Title xl:Heading my-14">
-            STAY UPDATED WITH ALL WE'RE DOING
+            STAY UPDATED WITH ALL WE ARE DOING
           </h1>
           <div className="flex flex-row gap-6 w-full overflow-y-auto h-full py-4 no-scrollbar">
-            {response.newsletterContent.map((news) => (
-              <div className="flex flex-col" key={news.title}>
+            {response.newsletterContent.map((news, index) => (
+              <div className="flex flex-col" key={index}>
                 <div className="w-[46vh] relative h-[46vh]">
                   <Image
                     src={`${news.imageSrc}`}
