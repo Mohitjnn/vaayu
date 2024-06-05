@@ -103,7 +103,7 @@ const About = () => {
               >
                 <div className="w-full xl:w-[60vh] relative h-[70vh] px-6 ">
                   <Image
-                    src={`/Founder${index + 1}.png`}
+                    src={`/static/images/Founder${index + 1}.png`}
                     priority={true}
                     fill={true}
                     objectFit="contain"

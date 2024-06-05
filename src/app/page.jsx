@@ -101,7 +101,7 @@ export default function Home() {
             >
               <div className="w-full xl:w-[65%] relative h-[40vh] xl:h-[48vh] overflow-visible group">
                 <Image
-                  src={`/Achievement${index + 1}.png`}
+                  src={`/static/images/Achievement${index + 1}.png`}
                   fill={true}
                   objectFit="contain"
                   alt="Achievement"
