@@ -1,48 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import { basicSchema1 } from "@/schemas";
-import axios from "axios";
 
-const onSubmit = async (values, actions) => {
-  try {
-    const response = await axios.post(
-      "https://script.google.com/macros/s/AKfycbycspdp_2Wp8y9ghCA1waz22dqU3HkfYpvGNjIfGusv5Vl4EmaArwYRRldSBnL6_Tk/exec",
-      JSON.stringify(values)
-    );
-
-    if (response.status === 200) {
-      console.log("Form data successfully sent!");
-      console.log(JSON.stringify(values));
-      // Display a success message to the user
-    }
-  } catch (error) {
-    console.error("Error sending form data:", error);
-    // Handle errors by displaying an error message to the user
-  }
-
-  // Reset form after submission
-  actions.resetForm();
-};
+const formUrl =
+  "https://script.google.com/macros/s/AKfycbzIDO9WfxaGMHtttPfKg5roVUERVKMrht19l32tAhpyCJQANxCgbooxcBZn02D5Ifs/exec";
 
 function Form1() {
-  const { values, handleBlur, touched, handleChange, handleSubmit, errors } =
+  const [successMessage, setSuccessMessage] = useState("");
+
+  const { values, handleBlur, touched, handleChange, errors, handleSubmit } =
     useFormik({
       initialValues: {
         name: "",
         email: "",
         Phonenumber: "",
         desc: "",
+        formType: "ContactUs",
       },
       validationSchema: basicSchema1,
-      onSubmit,
+      onSubmit: (values, { resetForm }) => {
+        const formData = new FormData();
+        formData.append("name", values.name);
+        formData.append("email", values.email);
+        formData.append("Phonenumber", values.Phonenumber);
+        formData.append("desc", values.desc);
+        formData.append("formType", values.formType);
+
+        fetch(formUrl, {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => {
+            if (response.ok) {
+              setSuccessMessage("Form submitted successfully!");
+              console.log(response);
+              resetForm();
+            } else {
+              setSuccessMessage("Form submission failed. Please try again.");
+            }
+          })
+          .catch(() => {
+            setSuccessMessage("An error occurred. Please try again.");
+          });
+      },
     });
 
   return (
     <form
-      onSubmit={handleSubmit}
-      action=""
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleSubmit();
+      }}
       className="flex flex-col space-y-4 mt-4 text-left w-full h-fit"
     >
+      <input
+        type="hidden"
+        id="formType"
+        name="formType"
+        value={values.formType}
+      ></input>
       <label
         htmlFor="name"
         className={`font-semibold ${
@@ -56,6 +72,7 @@ function Form1() {
         onChange={handleChange}
         onBlur={handleBlur}
         id="name"
+        name="name"
         className={`input ${
           errors.name && touched.name
             ? "border-2 border-red-600"
@@ -78,6 +95,7 @@ function Form1() {
         onChange={handleChange}
         onBlur={handleBlur}
         id="email"
+        name="email"
         className={`input ${
           errors.email && touched.email
             ? "border-2 border-red-600"
@@ -104,6 +122,7 @@ function Form1() {
         onChange={handleChange}
         onBlur={handleBlur}
         id="Phonenumber"
+        name="Phonenumber"
         className={`input ${
           errors.Phonenumber && touched.Phonenumber
             ? "border-2 border-red-600"
@@ -125,6 +144,7 @@ function Form1() {
         onChange={handleChange}
         onBlur={handleBlur}
         id="desc"
+        name="desc"
         cols={2}
         rows={2}
         placeholder="A short description of your questions"
@@ -136,6 +156,8 @@ function Form1() {
       <button type="submit" className="Btnlight rounded-lg py-2 Text">
         Submit
       </button>
+
+      {successMessage && <p className="text-green-500">{successMessage}</p>}
     </form>
   );
 }

@@ -1,6 +1,6 @@
 import * as yup from "yup";
 
-const experienceOptions = ["Beginner", "Intermediate", "Advanced", "Expert"];
+const experienceOptions = ["1 year or less", "2 years", "3 years", "4+ years"];
 
 export const basicSchema1 = yup.object().shape({
   name: yup.string().required("Required"),

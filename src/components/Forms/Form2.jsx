@@ -1,15 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import { basicSchema2 } from "@/schemas";
 
-const onSubmit = async (values, actions) => {
-  console.log(values);
-  console.log(actions);
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  actions.resetForm();
-};
+const formUrl =
+  "https://script.google.com/macros/s/AKfycbzIDO9WfxaGMHtttPfKg5roVUERVKMrht19l32tAhpyCJQANxCgbooxcBZn02D5Ifs/exec";
 
 function Form2() {
+  const [successMessage, setSuccessMessage] = useState("");
+
   const { values, handleBlur, touched, handleChange, handleSubmit, errors } =
     useFormik({
       initialValues: {
@@ -18,9 +16,35 @@ function Form2() {
         Phonenumber: "",
         Experience: "",
         desc: "",
+        formType: "JoinUs",
       },
       validationSchema: basicSchema2,
-      onSubmit,
+      onSubmit: (values, { resetForm }) => {
+        const formData = new FormData();
+        formData.append("name", values.name);
+        formData.append("email", values.email);
+        formData.append("Phonenumber", values.Phonenumber);
+        formData.append("Experience", values.Experience);
+        formData.append("desc", values.desc);
+        formData.append("formType", values.formType);
+
+        fetch(formUrl, {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => {
+            if (response.ok) {
+              setSuccessMessage("Form submitted successfully!");
+              console.log(response);
+              resetForm();
+            } else {
+              setSuccessMessage("Form submission failed. Please try again.");
+            }
+          })
+          .catch(() => {
+            setSuccessMessage("An error occurred. Please try again.");
+          });
+      },
     });
 
   return (
@@ -29,6 +53,12 @@ function Form2() {
       action=""
       className="flex flex-col space-y-4 text-left w-full h-fit"
     >
+      <input
+        type="hidden"
+        id="formType"
+        name="formType"
+        value={values.formType}
+      ></input>
       <label
         htmlFor="name"
         className={`font-semibold ${
@@ -42,6 +72,7 @@ function Form2() {
         onChange={handleChange}
         onBlur={handleBlur}
         id="name"
+        name="name"
         className={`input ${
           errors.name && touched.name
             ? "border-2 border-red-600"
@@ -64,6 +95,7 @@ function Form2() {
         onChange={handleChange}
         onBlur={handleBlur}
         id="email"
+        name="email"
         className={`input ${
           errors.email && touched.email
             ? "border-2 border-red-600"
@@ -92,6 +124,7 @@ function Form2() {
             onChange={handleChange}
             onBlur={handleBlur}
             id="Phonenumber"
+            name="Phonenumber"
             className={`input ${
               errors.Phonenumber && touched.Phonenumber
                 ? "border-2 border-red-600"
@@ -119,6 +152,7 @@ function Form2() {
             onChange={handleChange}
             onBlur={handleBlur}
             id="Experience"
+            name="Experience"
             className={`input ${
               errors.Experience && touched.Experience
                 ? "border-2 border-red-600"
@@ -126,10 +160,10 @@ function Form2() {
             }`}
           >
             <option value="">Select Experience</option>
-            <option value="Beginner">Beginner</option>
-            <option value="Intermediate">Intermediate</option>
-            <option value="Advanced">Advanced</option>
-            <option value="Expert">Expert</option>
+            <option value="1 year or less">1 year or less</option>
+            <option value="2 years">2 years</option>
+            <option value="3 years">3 years</option>
+            <option value="4+ years">4+ years</option>
           </select>
         </div>
       </div>
@@ -156,6 +190,7 @@ function Form2() {
       <button type="submit" className="Btnlight rounded-lg py-2 Text">
         Submit
       </button>
+      {successMessage && <p className="text-green-500">{successMessage}</p>}
     </form>
   );
 }
