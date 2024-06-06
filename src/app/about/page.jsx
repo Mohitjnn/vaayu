@@ -128,7 +128,7 @@ const About = () => {
         <section className="w-full h-fit px-4 lg:px-12 space-y-4 flex flex-col items-center ">
           <h1 className="Title xl:Heading">Why Choose Us</h1>
           <div
-            className="flex flex-row justify-start w-full overflow-x-auto xl:pt-8 xl:overflow-x-hidden h-full no-scrollbar"
+            className="flex flex-row justify-start w-full overflow-x-auto overflow-y-hidden scroll-smooth xl:pt-8 xl:overflow-x-hidden h-full no-scrollbar"
             ref={formContainerRef}
           >
             {response.aboutUsList1.map((reasons, index) => (

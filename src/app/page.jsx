@@ -17,7 +17,7 @@ export default function Home() {
     <main>
       <center className="w-full h-fit">
         <section>
-          <div className="relative xl:w-full w-screen flex items-center xl:h-[110vh] h-[80vh]">
+          <div className="relative w-full flex items-center xl:h-[110vh] h-[80vh]">
             <Image
               fill={true}
               priority={true}
@@ -68,9 +68,9 @@ export default function Home() {
           <h1 className="Title xl:Heading my-14">
             STAY UPDATED WITH ALL WE ARE DOING
           </h1>
-          <div className="flex flex-row gap-6 w-full overflow-y-auto h-full py-4 no-scrollbar">
+          <div className="flex flex-row gap-6 w-full overflow-x-auto h-full py-4 no-scrollbar">
             {response.newsletterContent.map((news, index) => (
-              <div className="flex flex-col" key={index}>
+              <div className="flex flex-col m-4" key={index}>
                 <div className="w-[46vh] relative h-[46vh]">
                   <Image
                     src={`${news.imageSrc}`}
