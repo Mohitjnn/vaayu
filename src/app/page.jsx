@@ -21,6 +21,7 @@ export default function Home() {
             <Image
               fill={true}
               priority={true}
+              objectFit="cover"
               src="/static/images/homePageImage.png"
               className="opacity-70"
               alt="sportImage"
