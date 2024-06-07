@@ -94,18 +94,16 @@ function Navbar() {
       </button>
       <div className={`xl:hidden MobileLinks ${Open ? "" : "hidden"}`}>
         {Links.map((link) => (
-          <Transition>
-            <Link
-              href={link.url}
-              key={link.url}
-              className={`subHeading font-extralight hover:underline underline-offset-4 ${
-                activeLink === link.url ? "text-blue-500 underline" : ""
-              }`}
-              onClick={() => setActiveLink(link.url)}
-            >
-              {link.name}
-            </Link>
-          </Transition>
+          <Link
+            href={link.url}
+            key={link.url}
+            className={`subHeading font-extralight hover:underline underline-offset-4 ${
+              activeLink === link.url ? "text-blue-500 underline" : ""
+            }`}
+            onClick={() => setActiveLink(link.url)}
+          >
+            <Transition key={link.url}>{link.name}</Transition>
+          </Link>
         ))}
       </div>
     </div>
