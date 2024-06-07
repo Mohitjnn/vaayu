@@ -17,7 +17,7 @@ function Footer() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center lg:items-start lg:mt-16 w-fit h-full space-y-6 lg:space-y-3 px-16 py-8">
+      <div className="flex flex-col items-center lg:items-start lg:mt-16 w-fit h-full space-y-6 lg:space-y-3 py-8">
         <h1 className="Title lg:subHeading">Contact</h1>
         <div className=" Heading font-normal lg:text text-center lg:text-start space-y-6 lg:space-y-1 opacity-65">
           <p>Creedaindiasports@gmail.com</p>
