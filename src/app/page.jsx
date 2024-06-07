@@ -2,6 +2,7 @@ import Image from "next/image";
 // import axios from "axios";
 import getData from "@/customHook/datafetch";
 import Link from "next/link";
+import Transition from "@/framer/transition";
 
 export default async function Home() {
   const response = await getData();
@@ -26,10 +27,12 @@ export default async function Home() {
               className=" w-full xl:w-1/2 h-full flex justify-evenly xl:justify-start items-start flex-col z-20 py-10 px-4 xl:px-14 "
               style={{ textShadow: "4px 2px 13px black" }}
             >
-              <h1 className="leading-relaxed text-pretty xl:text-left Title text-white">
-                EMPOWERING THE NEXT GENERATION OF ATHLETES: REVOLUTIONIZING
-                SPORTS EDUCATION
-              </h1>
+              <Transition>
+                <h1 className="leading-relaxed text-pretty xl:text-left Title text-white">
+                  EMPOWERING THE NEXT GENERATION OF ATHLETES: REVOLUTIONIZING
+                  SPORTS EDUCATION
+                </h1>
+              </Transition>
               <button className="Btnlight subHeading mt-2">EXPLORE</button>
             </div>
           </div>
@@ -42,7 +45,7 @@ export default async function Home() {
                 src="/static/images/AboutUsPicture.png"
                 objectFit="contain"
                 fill={true}
-                className="px-4 xl:px-0"
+                className="px-4 xl:px-0 rounded-3xl"
                 alt="about us picture"
               />
             </div>
@@ -71,6 +74,7 @@ export default async function Home() {
                     fill={true}
                     objectFit="cover"
                     alt={news.title}
+                    className="rounded-3xl"
                   />
                 </div>
                 <p className="subHeading mt-4">{news.title}</p>

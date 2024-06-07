@@ -53,7 +53,7 @@
   /* nav responsive */
 
   .MobileLinks {
-    @apply absolute top-6 left-0 w-full h-fit mt-14 bg-white/60 text-black flex flex-wrap justify-evenly items-center z-50 rounded-b-3xl
+    @apply absolute top-6 left-0 w-full h-fit mt-14 bg-white/60 text-black flex flex-wrap justify-evenly items-center z-50 rounded-b-3xl py-8
   }
 
 }

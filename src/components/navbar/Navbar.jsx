@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Transition from "@/framer/transition";
 
 const Links = [
   { name: "Home", url: "/" },
@@ -91,20 +92,21 @@ function Navbar() {
           </svg>
         )}
       </button>
-
       <div className={`xl:hidden MobileLinks ${Open ? "" : "hidden"}`}>
-        {Links.map((link) => (
-          <Link
-            href={link.url}
-            key={link.url}
-            className={`subHeading font-extralight hover:underline underline-offset-4 ${
-              activeLink === link.url ? "text-blue-500 underline" : ""
-            }`}
-            onClick={() => setActiveLink(link.url)}
-          >
-            {link.name}
-          </Link>
-        ))}
+        <Transition>
+          {Links.map((link) => (
+            <Link
+              href={link.url}
+              key={link.url}
+              className={`subHeading font-extralight hover:underline underline-offset-4 ${
+                activeLink === link.url ? "text-blue-500 underline" : ""
+              }`}
+              onClick={() => setActiveLink(link.url)}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </Transition>
       </div>
     </div>
   );
