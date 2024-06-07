@@ -1,15 +1,11 @@
-"use client";
-
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import useAxios from "../customHook/useAxios";
+// import axios from "axios";
+import getData from "@/customHook/datafetch";
+import Link from "next/link";
 
-export default function Home() {
-  const { response, error } = useAxios();
-  const router = useRouter();
+export default async function Home() {
+  const response = await getData();
 
-  if (error)
-    return <div className="Title w-full text-center py-4">Error: {error}</div>;
   if (!response)
     return <div className="Title w-full text-center py-4">Loading...</div>;
 
@@ -53,13 +49,10 @@ export default function Home() {
             <div className="flex flex-col px-4 my-10 xl:my-0 xl:p-0 xl:w-2/3 justify-between items-center xl:items-start xl:justify-left text-justify xl:text-left">
               <p className="text-xl md:text-xl leading-relaxed md:leading-loose font-medium">
                 <span className="font-semibold">VAAYUN</span>
-                {response.desc.homePage}
+                {response?.desc.homePage}
               </p>
-              <button
-                className="Btnlight text mt-4"
-                onClick={() => router.push("/about")}
-              >
-                More
+              <button className="Btnlight text mt-4">
+                <Link href="/about">More</Link>
               </button>
             </div>
           </div>
@@ -69,7 +62,7 @@ export default function Home() {
             STAY UPDATED WITH ALL WE ARE DOING
           </h1>
           <div className="flex flex-row gap-6 w-full overflow-x-auto h-full py-4 no-scrollbar">
-            {response.newsletterContent.map((news, index) => (
+            {response?.newsletterContent.map((news, index) => (
               <div className="flex flex-col m-4" key={index}>
                 <div className="w-[46vh] relative h-[46vh]">
                   <Image
@@ -84,16 +77,13 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <button
-            className="Btnlight text mt-4"
-            onClick={() => router.push("/newsletter")}
-          >
-            BROWSE NEWSLETTER
+          <button className="Btnlight text mt-4">
+            <Link href="/newsletter">BROWSE NEWSLETTER</Link>
           </button>
         </section>
         <section className="w-full mt-16 h-full xl:h-fit px-4 xl:px-16 flex flex-col items-center">
           <h1 className="Title xl:Heading font-bold mb-16">Achievements</h1>
-          {response.achievements.map((achievement, index) => (
+          {response?.achievements.map((achievement, index) => (
             <div
               key={index}
               className={`flex flex-col items-center justify-between xl:px-16 w-full xl:my-8 h-fit gap-8 ${

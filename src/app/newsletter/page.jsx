@@ -1,14 +1,10 @@
-"use client";
-
 import React from "react";
 import NewsContent from "@/components/NewsLetterContent/NewsContent";
-import useAxios from "../../customHook/useAxios";
+import getData from "@/customHook/datafetch";
 
-function Newsletter() {
-  const { response, error } = useAxios();
+async function Newsletter() {
+  const response = await getData();
 
-  if (error)
-    return <div className="Title w-full text-center py-4">Error: {error}</div>;
   if (!response)
     return <div className="Title w-full text-center py-4">Loading...</div>;
 

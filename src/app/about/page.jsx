@@ -1,14 +1,32 @@
 "use client";
-
 import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import Datacard from "@/components/DataCard/Datacard";
-import useAxios from "../../customHook/useAxios";
 
 const About = () => {
+  const [response, setData] = useState(null);
+  const [error, setError] = useState(null);
+
   const formContainerRef = useRef(null);
   const [cardWidth, setCardWidth] = useState(0);
-  const { response, error } = useAxios();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/data.json");
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        const data = await response.json();
+        setData(data);
+      } catch (err) {
+        console.log(err);
+        setError(err.message);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   useEffect(() => {
     const updateCardWidth = () => {
