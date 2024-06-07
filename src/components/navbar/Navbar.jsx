@@ -93,8 +93,8 @@ function Navbar() {
         )}
       </button>
       <div className={`xl:hidden MobileLinks ${Open ? "" : "hidden"}`}>
-        <Transition>
-          {Links.map((link) => (
+        {Links.map((link) => (
+          <Transition>
             <Link
               href={link.url}
               key={link.url}
@@ -105,8 +105,8 @@ function Navbar() {
             >
               {link.name}
             </Link>
-          ))}
-        </Transition>
+          </Transition>
+        ))}
       </div>
     </div>
   );
