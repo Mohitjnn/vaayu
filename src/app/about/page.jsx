@@ -124,9 +124,8 @@ const About = () => {
                     src={`/static/images/Founder${index + 1}.png`}
                     priority={true}
                     fill={true}
-                    objectFit="cover"
                     alt={Founder.name}
-                    className="rounded-xl"
+                    className="lg:rounded-xl object-contain xl:object-cover"
                   />
                 </div>
                 <div className="text-pretty w-full ">
