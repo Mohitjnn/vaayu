@@ -1,15 +1,16 @@
 import React from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 function Footer() {
   return (
     <div className="w-full bg-blue-500 mt-8  py-10 h-full xl:px-14 bottom-0 flex flex-col lg:flex-row justify-between items-center">
       <div className="flex flex-col items-center justify-between w-fit h-fit space-y-6 lg:space-y-3 lg:px-16">
-        <Image src="/static/images/logoWhite.png" height={20} width={90} />
-        <h1 className="Title font-semibold lg:subHeading text-center">
+        <Image src="/static/images/logoWhite.png" height={10} width={60} />
+        <h1 className="Heading md:Title font-semibold lg:subHeading text-center">
           VAAYUN INDIA
         </h1>
-        <div className="Heading lg:text text-center font-normal opacity-65 px-4 space-y-4 lg:space-y-2 lg:py-2 py-4">
+        <div className="subHeading lg:text text-center font-normal opacity-65 px-4 md:space-y-4 lg:space-y-2 lg:py-2 py-4">
           <p>Designed and Developed by</p>
           <p>Mohit Jain</p>
           <p className="md:subHeading lg:text-lg font-normal text-center">
@@ -18,28 +19,33 @@ function Footer() {
         </div>
       </div>
       <div className="flex flex-col items-center lg:items-start lg:mt-16 w-fit h-full space-y-6 lg:space-y-3 py-8">
-        <h1 className="Title lg:subHeading">Contact</h1>
-        <div className=" Heading font-normal lg:text text-center lg:text-start space-y-6 lg:space-y-1 opacity-65">
+        <h1 className="Heading lg:subHeading">Contact</h1>
+        <div className="subHeading font-normal lg:text text-center lg:text-start space-y-6 lg:space-y-1 opacity-65">
           <p>Creedaindiasports@gmail.com</p>
           <p>+91 8689890988</p>
           <p>+91 8291724184</p>
         </div>
       </div>
       <div className="flex flex-col items-center justify-evenly w-fit h-fit my-4 lg:my-2 space-y-3 px-16">
-        <h1 className="Title lg:subHeading">Socials</h1>
+        <h1 className="Heading lg:subHeading">Socials</h1>
         <div className="flex items-center space-x-4 opacity-65">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="50"
-            height="50"
-            viewBox="0 0 24 24"
-            fill="none"
+          <Link
+            href="https://www.instagram.com/creedaindia?igsh=YnhzcGNkcWdlandn"
+            target="_blank"
           >
-            <path
-              d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81v8.37C2 19.83 4.17 22 7.81 22h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2ZM12 15.88c-2.14 0-3.88-1.74-3.88-3.88 0-2.14 1.74-3.88 3.88-3.88 2.14 0 3.88 1.74 3.88 3.88 0 2.14-1.74 3.88-3.88 3.88Zm5.92-9c-.05.12-.12.23-.21.33-.1.09-.21.16-.33.21a.995.995 0 0 1-1.09-.21c-.09-.1-.16-.21-.21-.33A.995.995 0 0 1 16 6.5c0-.13.03-.26.08-.38.05-.13.12-.23.21-.33.23-.23.58-.34.9-.27.07.01.13.03.19.06.06.02.12.05.18.09.05.03.1.08.15.12.09.1.16.2.21.33.05.12.08.25.08.38s-.03.26-.08.38Z"
-              fill="#000000"
-            ></path>
-          </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81v8.37C2 19.83 4.17 22 7.81 22h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2ZM12 15.88c-2.14 0-3.88-1.74-3.88-3.88 0-2.14 1.74-3.88 3.88-3.88 2.14 0 3.88 1.74 3.88 3.88 0 2.14-1.74 3.88-3.88 3.88Zm5.92-9c-.05.12-.12.23-.21.33-.1.09-.21.16-.33.21a.995.995 0 0 1-1.09-.21c-.09-.1-.16-.21-.21-.33A.995.995 0 0 1 16 6.5c0-.13.03-.26.08-.38.05-.13.12-.23.21-.33.23-.23.58-.34.9-.27.07.01.13.03.19.06.06.02.12.05.18.09.05.03.1.08.15.12.09.1.16.2.21.33.05.12.08.25.08.38s-.03.26-.08.38Z"
+                fill="#000000"
+              ></path>
+            </svg>
+          </Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
