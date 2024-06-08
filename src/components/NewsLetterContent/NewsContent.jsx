@@ -17,12 +17,12 @@ const NewsContent = ({ content, section }) => {
             src={item.imageSrc}
             fill={true}
             alt={item.title}
-            className="object-contain xl:object-cover rounded-3xl"
+            className="object-contain xl:object-cover"
           />
         </div>
         <Transition>
-          <h1 className="Title xl:Heading text-center ">{item.title}</h1>
-          <p className="text mt-2">{item.description}</p>
+          <h1 className="Title Heading text-center ">{item.title}</h1>
+          <p className="text lg:text-m mt-2">{item.description}</p>
         </Transition>
         <hr className="w-full border-2 border-gray-400 mt-4" />
       </>

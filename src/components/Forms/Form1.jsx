@@ -51,9 +51,10 @@ function Form1() {
         e.preventDefault();
         handleSubmit();
       }}
-      className="flex flex-col space-y-4 mt-4 text-left w-full h-fit"
+      className="flex flex-col items-start space-y-4 text-left w-full"
     >
       <input
+        className=""
         type="hidden"
         id="formType"
         name="formType"

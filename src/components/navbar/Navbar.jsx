@@ -37,7 +37,7 @@ function Navbar() {
         />
         <Link
           href="/"
-          className="Heading xl:text-lg font-bold xl:font-black"
+          className="text-lg font-bold xl:font-black"
           onClick={() => setActiveLink("/")}
         >
           VAAYUN INDIA
@@ -100,7 +100,7 @@ function Navbar() {
           <Link
             href={link.url}
             key={link.url}
-            className={`subHeading font-extralight hover:underline underline-offset-4 ${
+            className={`text font-extralight hover:underline underline-offset-4 ${
               activeLink === link.url ? "text-blue-500 underline" : ""
             }`}
             onClick={() => {

@@ -29,7 +29,6 @@ export default async function Home() {
                 REVOLUTIONIZING SPORTS EDUCATION
               </p>
             </Transition>
-            <button className="Btnlight subHeading mt-2">EXPLORE</button>
           </div>
         </section>
         <section className="flex flex-col-reverse items-center justify-center h-fit lg:flex-row w-full xl:px-20 lg:px-10 lg:my-20">
@@ -86,24 +85,27 @@ export default async function Home() {
           </button>
         </section>
         <section className="w-full mt-16 h-full xl:h-fit px-4 xl:px-16 flex flex-col items-center">
-          <h1 className="xl:Title Heading font-bold mb-16">Achievements</h1>
+          <h1 className="xl:Title Heading font-bold mb-10 xl:mb-16">
+            Achievements
+          </h1>
           {response?.achievements.map((achievement, index) => (
             <div
               key={index}
-              className={`flex flex-col items-center justify-between xl:px-16 w-full xl:my-8 h-fit ${
-                index % 2 === 0 ? "xl:flex-row" : "xl:flex-row-reverse"
+              className={`flex flex-col items-center justify-between xl:px-16 w-full lg:my-8 h-fit ${
+                index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
               }`}
             >
-              <div className="w-full xl:w-[50%] relative h-[40vh] xl:h-[48vh] overflow-visible group">
+              <div className="w-full lg:w-[50%] relative h-[40vh] xl:h-[48vh] overflow-visible group">
                 <Image
                   src={`/static/images/Achievement${index + 1}.png`}
                   layout="fill"
                   alt="Achievement"
+                  className="object-contain lg:object-fill"
                 />
               </div>
-              <div className="w-full lg:w-[40%] mb-8 xl:mb-0 text-left space-y-4 lg:space-y-8 flex flex-col">
-                <h1 className="Heading">{achievement.title}</h1>
-                <p className="subHeading font-normal">
+              <div className="w-full lg:w-[40%] xl:my-0 text-left space-y-4 lg:space-y-8 flex flex-col">
+                <h1 className="subHeading xl:Heading">{achievement.title}</h1>
+                <p className="text xl:subHeading xl:font-normal ">
                   {achievement.description}
                 </p>
               </div>

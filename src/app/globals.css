@@ -30,7 +30,7 @@
   }
 
   .subHeading {
-    @apply md:text-xl text-lg font-semibold md:font-bold;
+    @apply md:text-2xl text-xl font-semibold md:font-bold;
   }
 
   .text {
@@ -46,7 +46,7 @@
   /* form */
 
   .input {
-    @apply border-2 border-gray-500 rounded-lg h-fit p-5 outline-none w-[100%]
+    @apply border-2 border-gray-500 rounded-lg h-fit p-3 outline-none w-[100%]
   }
 
 

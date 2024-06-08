@@ -22,7 +22,7 @@ function Contact() {
     <main className="w-full h-full">
       <center className="w-full h-full px-4 md:px-0 xl:px-16">
         <section className="flex flex-col xl:flex-row w-full h-full justify-between items-start xl:space-x-6 xl:space-y-0">
-          <div className="hidden md:block md:w-full xl:w-[45%] relative md:h-[45vh] xl:h-[100vh] bg-custom-gradient  xl:rounded-br-[20%] xl:my-5">
+          <div className="hidden md:block md:w-full xl:w-[45%] relative md:h-[45vh] xl:h-[85vh] bg-custom-gradient  xl:rounded-br-[20%] xl:my-5">
             <Image
               src="/static/images/ContactUs.png"
               fill={true}
@@ -33,26 +33,26 @@ function Contact() {
             />
           </div>
           <div
-            className="flex flex-col w-full xl:w-[50%] h-full space-y-4 items-start px-4 my-6 justify-start xl:justify-start overflow-y-auto"
+            className="flex flex-col w-full xl:w-[50%] h-full items-start my-4 px-4  justify-start"
             ref={formContainerRef}
           >
-            <div className="flex w-full justify-between">
-              <div className="flex items-center justify-center w-full space-x-4">
+            <div className="flex items-center justify-between w-full py-2">
+              <div className="flex items-center space-x-4 justify-center w-full">
                 <button
                   onClick={() => scrollToForm("form1")}
-                  className="flex items-center justify-center text Btnlight "
+                  className=" Btnlight py-2"
                 >
                   CONTACT US
                 </button>
                 <button
                   onClick={() => scrollToForm("form2")}
-                  className="flex items-center justify-center text Btnlight "
+                  className=" Btnlight py-2 "
                 >
                   JOIN US
                 </button>
               </div>
             </div>
-            <h1 className="Title text-blue-500 flex w-full justify-center">
+            <h1 className="Heading text-blue-500">
               {isForm1Visible ? "Contact Us" : "Join Us"}
             </h1>
             {isForm1Visible ? <Form1 /> : <Form2 />}
