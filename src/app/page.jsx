@@ -46,20 +46,20 @@ export default async function Home() {
               <h1 className="Heading lg:Title">ABOUT US</h1>
               <p className="lg:text-lg xl:text-xl text-sm leading-relaxed font-medium">
                 <span className="font-semibold">VAAYUN </span>
-                {/* {response.desc.homePage1} */}
-                is a sports academy that aims to coach young children for a
+                {response.desc.homePage1}
+                {/* is a sports academy that aims to coach young children for a
                 better dominated sports culture in our country. Our focus is to
                 train children in various fields of sports and fitness
                 programmes during and after school hours, as well as to prepare
                 and guide them for participation in state and national
-                competitions.
+                competitions. */}
               </p>
               <p className="text-sm lg:text-lg xl:text-xl leading-relaxed font-medium pl-4 xl:pl-10 w-[110%] border-l-4">
-                {/* {response.desc.homePage2} */}
-                The sole aim of our programme is to ensure that your school
+                {response.desc.homePage2}
+                {/* The sole aim of our programme is to ensure that your school
                 grows not only academically but also makes a remarkable growth
                 in the field of sports and games, which can be achieved with our
-                training.
+                training. */}
               </p>
               <button className="Btnlight text mt-4">
                 <Link href="/about">More</Link>
