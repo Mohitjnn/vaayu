@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Transition from "@/framer/transition";
+import Transition from "@/animations/transition";
 
 const NewsContent = ({ content, section }) => {
   return content

@@ -138,7 +138,16 @@
     }
   ],
   "desc": {
-    "homePage": " is a sports academy that aims to coach young children for a better dominated sports culture in our country. Our focus is to train children in various fields of sports and fitness programmes during and after school hours, as well as to prepare and guide them for participation in state and national competitions. The sole aim of our programme is to ensure that your school grows not only academically but also makes a remarkable growth in the field of sports and games, which can be acheived with our training.",
+    "homePage1": " is a sports academy that aims to coach young children for a better dominated sports culture in our country. Our focus is to train children in various fields of sports and fitness programmes during and after school hours, as well as to prepare and guide them for participation in state and national competitions.",
+    "homePage2": "The sole aim of our programme is to ensure that your school grows not only academically but also makes a remarkable growth in the field of sports and games, which can be achieved with our training.",
     "aboutUsPage": "transforms your school's sports program. Partnering with us elevates your curriculum, fosters essential life skills, and improves student fitness. We create a positive, supportive environment where students thrive on and off the field. Specialized resources and collaboration with your staff further enhance the value we bring. Let's transform your sports program and empower your students!"
-  }
+  },
+  "homePageImages": [
+    { "title": "homePageImage1", "Url": "/static/images/homePageImage.png" },
+    { "title": "homePageImage1", "Url": "/static/images/homePageImage2.png" },
+    { "title": "homePageImage1", "Url": "/static/images/homePageImage3.png" },
+    { "title": "homePageImage1", "Url": "/static/images/homePageImage4.png" },
+    { "title": "homePageImage1", "Url": "/static/images/homePageImage5.png" },
+    { "title": "homePageImage1", "Url": "/static/images/homePageImage6.png" }
+  ]
 }
