@@ -3,8 +3,8 @@ import Image from "next/image";
 
 function Datacard({ Reasons }) {
   return (
-    <div className="flex flex-col h-fit w-full p-4 mx-10 ml-0 md:ml-16 lg:mx-16 my-4 transition-transform duration-300 ease-in-out transform hover:scale-110 xl:shadow-xl xl:hover:shadow-2xl xl:rounded-3xl">
-      <div className="w-[50vh] h-[45vh] md:h-[50vh] relative ">
+    <div className="flex flex-col h-fit w-full p-4 mx-4 lg:mx-8 my-4 transition-transform duration-300 ease-in-out transform hover:scale-110 ">
+      <div className="w-[40vh] lg:w-[50vh] h-[40vh] xl:h-[45vh]  relative ">
         <Image
           src={`${Reasons.imageSrc}`}
           fill={true}

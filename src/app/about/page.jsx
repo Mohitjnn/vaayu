@@ -1,119 +1,41 @@
-"use client";
-import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import Datacard from "@/components/DataCard/Datacard";
+import getData from "@/customHook/datafetch";
 
-const About = () => {
-  const [response, setData] = useState(null);
-  const [error, setError] = useState(null);
+const About = async () => {
+  const response = await getData();
 
-  const formContainerRef = useRef(null);
-  const [cardWidth, setCardWidth] = useState(0);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/data.json");
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        const data = await response.json();
-        setData(data);
-      } catch (err) {
-        console.log(err);
-        setError(err.message);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    const updateCardWidth = () => {
-      if (formContainerRef.current && formContainerRef.current.firstChild) {
-        setCardWidth(formContainerRef.current.firstChild.offsetWidth);
-      }
-    };
-
-    // Initial card width calculation
-    updateCardWidth();
-
-    // Recalculate card width on window resize
-    window.addEventListener("resize", updateCardWidth);
-    return () => window.removeEventListener("resize", updateCardWidth);
-  }, [response]);
-
-  if (error)
-    return <div className="Title w-full text-center py-4">Error: {error}</div>;
   if (!response)
     return <div className="Title w-full text-center py-4">Loading...</div>;
-
-  const scrollRight = () => {
-    if (formContainerRef.current) {
-      const newScrollLeft = Math.min(
-        formContainerRef.current.scrollLeft + cardWidth,
-        formContainerRef.current.scrollWidth -
-          formContainerRef.current.clientWidth
-      );
-
-      formContainerRef.current.scrollTo({
-        left: newScrollLeft,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const scrollLeft = () => {
-    if (formContainerRef.current) {
-      const newScrollLeft = Math.max(
-        formContainerRef.current.scrollLeft - cardWidth,
-        0
-      );
-
-      formContainerRef.current.scrollTo({
-        left: newScrollLeft,
-        behavior: "smooth",
-      });
-    }
-  };
 
   return (
     <main className="w-full h-full">
       <center>
         <section className="w-full flex flex-col mt-4 md:px-14">
-          <div className="flex xl:flex-row flex-col items-center w-full h-fit gap-8">
-            <div className="w-full xl:w-[25%] h-fit flex flex-col justify-center items-start space-y-4">
-              <h1 className="Title xl:Heading text-blue-500 font-bold xl:pl-2">
-                About Us
+          <div className="flex flex-col items-center justify-center w-full h-fit gap-8">
+            <div className="w-full h-fit flex flex-col justify-center items-center text-justify space-y-4">
+              <h1 className="subHeading font-semibold text-blue-500">
+                Know Everything...About Us
               </h1>
-              <div className="flex flex-row justify-between items-center">
-                <Image
-                  src="/static/images/logo.png"
-                  height={50}
-                  width={50}
-                  objectFit="cover"
-                  alt="Logo"
-                />
-                <h1 className="subHeading font-black">VAAYUN INDIA</h1>
-              </div>
+              <h1 className="Title font-black">ABOUT VAAYUN</h1>
             </div>
-            <p className="text px-4 xl:px-0 w-fit xl:text-left text-justify leading-loose">
-              <span className="font-semibold">VAAYUN INDIA </span>
+            <p className="text-m xl:text  px-8 xl:mx-20 w-fit xl:text-left text-justify leading-8 xl:leading-9">
+              <span className=" font-semibold">VAAYUN INDIA </span>
               {response.desc.aboutUsPage}
             </p>
           </div>
-          <div className="justify-center hidden xl:block w-full xl:relative h-[60vh] xl:mt-4">
+          <div className="justify-center hidden xl:flex items-center w-full xl:relative h-[65vh] xl:mt-4">
             <Image
               src="/static/images/AboutUsPicture2.jpg"
               fill={true}
-              objectFit="contain"
               alt="About Us"
+              className="object-contain"
             />
           </div>
         </section>
         <section className="w-full h-fit xl:px-16 my-16 flex flex-col items-center">
-          <h1 className="Title xl:Heading">Founders</h1>
-          <div className="flex xl:flex-row flex-col w-full h-fit my-16 justify-between items-start space-y-16 xl:space-y-0 xl:space-x-6">
+          <h1 className="Heading xl:Title">Founders</h1>
+          <div className="flex xl:flex-row flex-col w-full h-fit my-16 justify-between items-start space-y-0 xl:space-x-6">
             {response.Founders.map((Founder, index) => (
               <div
                 className="flex flex-col w-screen xl:w-1/2 px-8 xl:px-0 items-center justify-center space-y-8"
@@ -133,7 +55,7 @@ const About = () => {
                   <h1 className="Heading xl:subHeading mb-4">
                     {Founder.Title}
                   </h1>
-                  <div className="subHeading font-normal leading-loose xl:text w-full ">
+                  <div className="font-normal leading-loose text text-center w-full xl:px-20 ">
                     {Founder.achievements.map((achievement, idx) => (
                       <p key={idx}>- {achievement}</p>
                     ))}
@@ -144,16 +66,12 @@ const About = () => {
           </div>
         </section>
         <section className="w-full h-fit px-4 lg:px-12 space-y-4 flex flex-col items-center ">
-          <h1 className="Title xl:Heading">Why Choose Us</h1>
-          <div
-            className="flex flex-row justify-start w-full overflow-x-auto overflow-y-hidden scroll-smooth xl:py-8  h-full no-scrollbar"
-            ref={formContainerRef}
-          >
+          <h1 className=" xl:Title Heading">Why Choose Us</h1>
+          <div className=" flex lg:gap-10 w-full overflow-x-auto h-full py-4 no-scrollbar scroll-smooth">
             {response.aboutUsList1.map((reasons, index) => (
               <Datacard Reasons={reasons} key={index} />
             ))}
           </div>
-          <div className="hidden xl:flex flex-row justify-center space-x-4 w-full h-fit"></div>
         </section>
       </center>
     </main>

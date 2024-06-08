@@ -37,18 +37,18 @@ function Navbar() {
         />
         <Link
           href="/"
-          className="Heading xl:subHeading font-bold xl:font-black"
+          className="Heading xl:text-lg font-bold xl:font-black"
           onClick={() => setActiveLink("/")}
         >
           VAAYUN INDIA
         </Link>
       </div>
-      <div className="hidden xl:flex xl:flex-row xl:space-x-10">
+      <div className="hidden xl:flex xl:flex-row xl:space-x-6">
         {Links.map((link) => (
           <Link
             href={link.url}
             key={link.url}
-            className={`subHeading font-extralight hover:underline underline-offset-4 ${
+            className={`text-m font-extralight hover:underline underline-offset-4 ${
               activeLink === link.url ? "text-blue-500 underline" : ""
             }`}
             onClick={() => setActiveLink(link.url)}

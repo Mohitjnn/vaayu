@@ -47,19 +47,9 @@ export default async function Home() {
               <p className="lg:text-lg xl:text-xl text-sm leading-relaxed font-medium">
                 <span className="font-semibold">VAAYUN </span>
                 {response.desc.homePage1}
-                {/* is a sports academy that aims to coach young children for a
-                better dominated sports culture in our country. Our focus is to
-                train children in various fields of sports and fitness
-                programmes during and after school hours, as well as to prepare
-                and guide them for participation in state and national
-                competitions. */}
               </p>
               <p className="text-sm lg:text-lg xl:text-xl leading-relaxed font-medium pl-4 xl:pl-10 w-[110%] border-l-4">
                 {response.desc.homePage2}
-                {/* The sole aim of our programme is to ensure that your school
-                grows not only academically but also makes a remarkable growth
-                in the field of sports and games, which can be achieved with our
-                training. */}
               </p>
               <button className="Btnlight text mt-4">
                 <Link href="/about">More</Link>
@@ -67,18 +57,18 @@ export default async function Home() {
             </div>
           </div>
         </section>
-        <section className="flex flex-col items-center w-full px-5 xl:px-20 lg:mt-14 space-y-4">
+        <section className="flex flex-col items-center w-full px-4 xl:px-16 lg:mt-14 space-y-4 xl:space-y-10">
           <h1 className="lg:Title Heading mt-10">WE CAPTURE EVERY MOMENT.</h1>
           <p className="lg:text-xl Text lg:w-1/2 xl:w-1/3">
             Know more about Vaayun and Stay updated in every possible way!
           </p>
-          <div className=" flex space-x-5 lg:gap-14 w-full overflow-x-auto h-full py-4 no-scrollbar">
+          <div className=" flex lg:gap-14 w-full overflow-x-auto h-full py-4 no-scrollbar">
             {response?.newsletterContent.map((news, index) => (
               <div
-                className="flex flex-col mx-2 lg:mx-12 h-full w-full "
+                className="flex flex-col mx-8 lg:mx-12 h-fit w-full "
                 key={index}
               >
-                <div className="w-[90vw] h-[50vh] lg:w-[50vh] relative lg:h-[60vh]">
+                <div className="w-[80vw] h-[50vh] lg:w-[50vh] relative lg:h-[60vh]">
                   <Image
                     src={`${news.imageSrc}`}
                     priority={true}
@@ -87,11 +77,11 @@ export default async function Home() {
                     alt={news.title}
                   />
                 </div>
-                <p className="subHeading mt-4">{news.title}</p>
+                <p className="subHeading mt-8">{news.title}</p>
               </div>
             ))}
           </div>
-          <button className="Btnlight text mt-4">
+          <button className="Btnlight text">
             <Link href="/newsletter">BROWSE NEWSLETTER</Link>
           </button>
         </section>
@@ -109,7 +99,6 @@ export default async function Home() {
                   src={`/static/images/Achievement${index + 1}.png`}
                   layout="fill"
                   alt="Achievement"
-                  className="transition-transform duration-500 ease-in-out transform group-hover:scale-110 object-cover lg:object-fill"
                 />
               </div>
               <div className="w-full lg:w-[40%] mb-8 xl:mb-0 text-left space-y-4 lg:space-y-8 flex flex-col">
