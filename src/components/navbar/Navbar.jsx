@@ -25,7 +25,7 @@ function Navbar() {
   return (
     <div
       className={`w-full flex flex-col xl:flex-row justify-between items-between xl:items-center px-4 lg:px-8 xl:px-14 z-30 h-fit  bg-black/20 backdrop-blur-sm top-0 text-white 
-        ${pathname === "/" ? "fixed " : "sticky "}
+        ${pathname === "/" || pathname === "/schools" ? "fixed " : "sticky "}
       `}
     >
       <div className="flex xl:justify-evenly items-center w-fit xl:w-fit h-fit py-2">
@@ -40,7 +40,7 @@ function Navbar() {
           className="text-lg font-bold xl:font-black"
           onClick={() => setActiveLink("/")}
         >
-          VAAYUN INDIA
+          VAAYUN
         </Link>
       </div>
       <div className="hidden xl:flex xl:flex-row xl:space-x-6">

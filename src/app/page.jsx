@@ -15,7 +15,7 @@ export default async function Home() {
       <center className="w-full h-fit">
         <section className="relative w-full h-[90vh] xl:h-[110vh] flex items-center">
           <div className="absolute w-full h-full z-0">
-            <ImageCarousel />
+            <ImageCarousel images={response.homePageImages} />
           </div>
           <div
             className="relative w-full h-full flex justify-center xl:justify-evenly items-center flex-col z-20 xl:space-y-8 py-10 xl:py-40 px-4 xl:px-60"

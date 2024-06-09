@@ -10,7 +10,6 @@ export default function Transition({ children }) {
       transition={{
         ease: "easeInOut",
         duration: 1,
-        staggerChildren: 0.3,
       }}
     >
       {children}

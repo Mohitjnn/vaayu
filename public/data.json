@@ -149,5 +149,27 @@
     { "title": "homePageImage1", "Url": "/static/images/homePageImage4.png" },
     { "title": "homePageImage1", "Url": "/static/images/homePageImage5.png" },
     { "title": "homePageImage1", "Url": "/static/images/homePageImage6.png" }
+  ],
+  "schoolPageImages": {
+    "Carousel": [
+      { "title": "image1", "Url": "/static/images/AboutUsPicture2.jpg" },
+      { "title": "image3", "Url": "/static/images/schoolsImage3.png" },
+      { "title": "image4", "Url": "/static/images/schoolsImage2.png" },
+      { "title": "image5", "Url": "/static/images/schoolsImage5.png" },
+      { "title": "image6", "Url": "/static/images/schoolsImage4.png" }
+    ],
+    "coachImage1": {
+      "title": "image1",
+      "Url": "/static/images/AboutUsPicture.png"
+    },
+    "coachImage2": {
+      "title": "image2",
+      "Url": "/static/images/schoolsImage1.png"
+    }
+  },
+  "schoolPageData": [
+    "At Vaayu, our coaches are the cornerstone of our sports  education and training programs, bringing a wealth of  experience and a passion for nurturing young talent. Each  coach at Vaayu boasts between 5 to 10 years of hands-on  experience in their respective sports disciplines.",
+    "Our coaches are not just experienced; they are also highly  decorated, having won numerous awards at the national level  and represented our country in various international  competitions. Our team of coaches is dedicated to delivering a  comprehensive sports education that helps students develop  their skills, enhance their fitness levels, and learn  essential life skills.They are adept at working with students  of all ages and skill levels, ensuring that every individual  receives personalized attention and guidance.",
+    "At Vaayu, we believe that top-tier sports training should be  accessible to all. Our primary mission is to provide  national-level coaching at a minimal cost, ensuring that every  aspiring athlete has the opportunity to achieve their full  potential. Our coaches are committed to this vision, working  tirelessly to offer the highest quality training without the  hefty price tag."
   ]
 }

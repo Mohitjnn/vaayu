@@ -8,7 +8,7 @@ function Footer() {
       <div className="flex flex-col items-center justify-between w-fit h-fit space-y-6 lg:space-y-3 lg:px-16">
         <Image src="/static/images/logoWhite.png" height={10} width={60} />
         <h1 className="Heading md:Title font-semibold lg:subHeading text-center">
-          VAAYUN INDIA
+          VAAYUN
         </h1>
         <div className="subHeading lg:text text-center font-normal opacity-65 px-4 md:space-y-4 lg:space-y-2 lg:py-2 py-4">
           <p>Designed and Developed by</p>
@@ -35,8 +35,8 @@ function Footer() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="50"
-              height="50"
+              width="32"
+              height="32"
               viewBox="0 0 24 24"
               fill="none"
             >
@@ -48,8 +48,8 @@ function Footer() {
           </Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="50"
-            height="50"
+            width="32"
+            height="32"
             viewBox="0 0 24 24"
             fill="none"
           >
@@ -58,14 +58,23 @@ function Footer() {
               d="M22 16.19c0 3.64-2.17 5.81-5.81 5.81H15c-.55 0-1-.45-1-1v-5.77c0-.27.22-.5.49-.5l1.76-.03c.14-.01.26-.11.29-.25l.35-1.91a.303.303 0 00-.3-.35l-2.13.03c-.28 0-.5-.22-.51-.49l-.04-2.45c0-.16.13-.3.3-.3l2.4-.04c.17 0 .3-.13.3-.3l-.04-2.4c0-.17-.13-.3-.3-.3l-2.7.04a2.996 2.996 0 00-2.95 3.05l.05 2.75c.01.28-.21.5-.49.51l-1.2.02c-.17 0-.3.13-.3.3l.03 1.9c0 .17.13.3.3.3l1.2-.02c.28 0 .5.22.51.49l.09 5.7c.01.56-.44 1.02-1 1.02h-2.3C4.17 22 2 19.83 2 16.18V7.81C2 4.17 4.17 2 7.81 2h8.38C19.83 2 22 4.17 22 7.81v8.38z"
             ></path>
           </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="60"
-            height="60"
-            viewBox="0 0 24 24"
+          <Link
+            href="https://m.youtube.com/@creeda_india?si=Hh0SCSejCzwhYHL5&fbclid=PAZXh0bgNhZW0CMTEAAaZjNDilczwnhtUNx7Zvote2ii7gK-pzPBdTnFuloHD5xk11mKoLp6hInoo_aem_AQNBleSoW9RF9JJvLMGHi5E6O7wYUn1DgVarQ_1W7SErLZxx6p2rKVhol48fzmM6aSEJi9MRHlDnzvcwEAkunQh8"
+            target="_blank"
           >
-            <path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path>
-          </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                fill="#000000"
+                d="M17 4H7C4 4 2 6 2 9v6c0 3 2 5 5 5h10c3 0 5-2 5-5V9c0-3-2-5-5-5zm-3.11 9.03l-2.47 1.48c-1 .6-1.82.14-1.82-1.03v-2.97c0-1.17.82-1.63 1.82-1.03l2.47 1.48c.95.58.95 1.5 0 2.07z"
+              ></path>
+            </svg>
+          </Link>
         </div>
       </div>
     </div>
