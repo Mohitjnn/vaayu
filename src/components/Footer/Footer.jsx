@@ -5,7 +5,7 @@ import Link from "next/link";
 function Footer() {
   return (
     <div className="w-full bg-blue-500 mt-8  py-8  h-full xl:px-14 bottom-0 flex flex-col lg:flex-row justify-between items-center text-white">
-      <div className="flex flex-col items-center justify-between w-fit h-fit space-y-2 lg:space-y-1 lg:px-16">
+      <div className="flex flex-col items-center justify-between w-full h-fit space-y-2 lg:space-y-1 lg:px-16">
         <Image src="/static/images/logoWhite.png" height={10} width={60} />
         <h1 className="Heading md:Title font-semibold lg:subHeading text-center">
           VAAYUN
@@ -18,7 +18,7 @@ function Footer() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-start lg:mt-16 w-fit h-full space-y-1 py-8">
+      <div className="flex flex-col items-start lg:mt-16 w-full px-8 h-full space-y-1 py-8">
         <h1 className="Heading lg:subHeading">Contact</h1>
         <div className=" font-normal text text-start space-y-1 opacity-65">
           <div className="flex w-full space-x-4">
@@ -76,7 +76,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-start w-full lg:w-fit h-fit my-4 lg:my-2 space-y-3 px-8 lg:px-16">
+      <div className="flex flex-col items-center justify-center w-full lg:w-fit h-fit my-4 lg:my-2 space-y-3 px-8 lg:px-16">
         <h1 className="Heading lg:subHeading w-full text-left">Socials</h1>
         <div className="flex justify-start w-full items-center space-x-4 opacity-65">
           <Link

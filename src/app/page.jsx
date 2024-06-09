@@ -2,7 +2,7 @@ import Image from "next/image";
 import getData from "@/customHook/datafetch";
 import Link from "next/link";
 import Transition from "@/animations/transition";
-import ImageCarousel from "@/components/ImageCarousel/ImageCarousel";
+import ImageCarousel from "@/components/Carousel/ImageCarousel";
 
 export default async function Home() {
   const response = await getData();
@@ -75,10 +75,10 @@ export default async function Home() {
                     priority={true}
                     layout="fill"
                     objectFit="cover"
-                    alt={news.title}
+                    alt={news.Title}
                   />
                 </div>
-                <p className="subHeading mt-8">{news.title}</p>
+                <p className="subHeading mt-8">{news.Title}</p>
               </div>
             ))}
           </div>

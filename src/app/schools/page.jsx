@@ -2,7 +2,7 @@ import Image from "next/image";
 import getData from "@/customHook/datafetch";
 import Link from "next/link";
 import Transition from "@/animations/transition";
-import ImageCarousel from "@/components/ImageCarousel/ImageCarousel";
+import ImageCarousel from "@/components/Carousel/ImageCarousel";
 
 export default async function School() {
   const response = await getData();

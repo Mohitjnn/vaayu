@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Datacard from "@/components/DataCard/Datacard";
 import getData from "@/customHook/datafetch";
+import DataCarousel from "@/components/Carousel/DataCarousel";
 
 const About = async () => {
   const response = await getData();
@@ -38,7 +38,7 @@ const About = async () => {
           <div className="flex xl:flex-row flex-col w-full h-fit my-16 justify-between items-start space-y-0 xl:space-x-6">
             {response.Founders.map((Founder, index) => (
               <div
-                className="flex flex-col w-screen xl:w-1/2 px-8 xl:px-0 items-center justify-center space-y-8"
+                className="flex flex-col w-full xl:w-1/2 px-8 xl:px-0 items-center justify-center space-y-8"
                 key={index}
               >
                 <div className="w-full xl:w-[60vh] relative h-[70vh] xl:h-[80vh] px-6 ">
@@ -69,11 +69,7 @@ const About = async () => {
         </section>
         <section className="w-full h-fit px-4 lg:px-12 space-y-4 flex flex-col items-center ">
           <h1 className=" Title  text-blue-900">Why Choose Us</h1>
-          <div className=" flex lg:gap-10 w-full overflow-x-auto h-full py-4 no-scrollbar scroll-smooth">
-            {response.aboutUsList1.map((reasons, index) => (
-              <Datacard Reasons={reasons} key={index} />
-            ))}
-          </div>
+          <DataCarousel Reasons={response.aboutUsList1} />
         </section>
       </center>
     </main>

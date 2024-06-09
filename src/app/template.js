@@ -19,23 +19,3 @@ export default function Template({ children }) {
     </motion.div>
   );
 }
-// "use client";
-// import pageswitchanimations from "@/animations/pageswitchanimations";
-// import React, { useEffect } from "react";
-
-// export default function Template({ children }) {
-//   useEffect(() => {
-//     pageswitchanimations(); // Call the function
-//   }, []);
-
-//   return (
-//     <div>
-//       <div
-//         style={{ backgroundColor: "#2196f3" }}
-//         id="circle"
-//         className="min-h-[20vh] z-30  rounded-full fixed bottom-1/3 left-1/2 w-[20vh]"
-//       />
-//       {children}
-//     </div>
-//   );
-// }
