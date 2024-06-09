@@ -13,9 +13,9 @@ export default async function School() {
   return (
     <main>
       <center className="w-full h-fit">
-        <section className="relative w-full h-[50vh] lg:h-[60vh] flex items-center">
+        <section className="relative w-full h-[50vh] lg:h-[80vh] flex items-center">
           <div className="absolute w-full h-fit z-0">
-            <div className="relative w-full h-[50vh] lg:h-[60vh]">
+            <div className="relative w-full h-[50vh] lg:h-[80vh]">
               <ImageCarousel images={response.schoolPageImages.Carousel} />
             </div>
           </div>
@@ -35,7 +35,7 @@ export default async function School() {
         </section>
         <section className="relative flex flex-col-reverse items-center justify-center h-fit lg:flex-col w-full xl:px-20 lg:px-10 lg:mt- mt-10">
           <div className="flex w-full lg:flex-col flex-col h-fit justify-between">
-            <h1 className="Heading ">Our Coaches</h1>
+            <h1 className="Heading lg:Title text-blue-900  ">Our Coaches</h1>
             <div className="flex w-full justify-around lg:px-14">
               <div className="px-4 relative w-full lg:w-[40%] h-[40vh] lg:h-[60vh] mt-10">
                 <Image
@@ -61,8 +61,9 @@ export default async function School() {
                 {response.schoolPageData.map((schoolData, index) => (
                   <p
                     key={index}
-                    className="text-sm lg:text-lg xl:text-xl leading-relaxed font-medium pl-4 my-4 w-full border-l-4"
+                    className="text-sm lg:text-lg xl:text-xl leading-relaxed font-medium pl-4 my-4 w-full"
                   >
+                    <span className="text-xl font-bold mr-2">{index + 1}.</span>
                     {schoolData}
                   </p>
                 ))}

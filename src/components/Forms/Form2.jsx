@@ -5,7 +5,7 @@ import { basicSchema2 } from "@/schemas";
 const formUrl =
   "https://script.google.com/macros/s/AKfycbzIDO9WfxaGMHtttPfKg5roVUERVKMrht19l32tAhpyCJQANxCgbooxcBZn02D5Ifs/exec";
 
-function Form2() {
+function Form2({ scrollToForm }) {
   const [successMessage, setSuccessMessage] = useState("");
 
   const { values, handleBlur, touched, handleChange, handleSubmit, errors } =
@@ -187,9 +187,20 @@ function Form2() {
           errors.desc && touched.desc ? "border-2 border-red-600" : ""
         } `}
       />
-      <button type="submit" className="Btnlight rounded-lg py-2 Text">
-        Submit
-      </button>
+
+      <div className="flex space-x-4 w-full items-center justify-center">
+        <button type="submit" className="Btnlight  rounded-lg py-2 Text">
+          Submit
+        </button>
+        <span className="mx-4 text"> Or</span>
+        <button
+          type="button"
+          onClick={() => scrollToForm("form1")}
+          className="Btnlight bg-white border-2 border-blue-500 text-blue-500 rounded-lg py-2 Text"
+        >
+          Contact Us
+        </button>
+      </div>
       {successMessage && <p className="text-green-500">{successMessage}</p>}
     </form>
   );

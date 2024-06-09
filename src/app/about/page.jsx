@@ -17,9 +17,11 @@ const About = async () => {
               <h1 className="subHeading font-semibold text-blue-500">
                 Know Everything...About Us
               </h1>
-              <h1 className="Title font-black">ABOUT VAAYUN</h1>
+              <h1 className="Title font-bold lg:font-black text-blue-800">
+                ABOUT VAAYUN
+              </h1>
             </div>
-            <p className="text-m xl:text  px-8 xl:mx-20 w-fit xl:text-left text-justify leading-8 xl:leading-9">
+            <p className="text-m xl:text  px-4 xl:mx-20 w-fit text-justify leading-8 xl:leading-9">
               <span className=" font-semibold">VAAYUN INDIA </span>
               {response.desc.aboutUsPage}
             </p>
@@ -34,14 +36,14 @@ const About = async () => {
           </div>
         </section>
         <section className="w-full h-fit xl:px-16 my-16 flex flex-col items-center">
-          <h1 className="Heading xl:Title">Founders</h1>
+          <h1 className="Heading xl:Title text-blue-900">Founders</h1>
           <div className="flex xl:flex-row flex-col w-full h-fit my-16 justify-between items-start space-y-0 xl:space-x-6">
             {response.Founders.map((Founder, index) => (
               <div
                 className="flex flex-col w-screen xl:w-1/2 px-8 xl:px-0 items-center justify-center space-y-8"
                 key={index}
               >
-                <div className="w-full xl:w-[60vh] relative h-[70vh] px-6 ">
+                <div className="w-full xl:w-[60vh] relative h-[70vh] xl:h-[80vh] px-6 ">
                   <Image
                     src={`/static/images/Founder${index + 1}.png`}
                     priority={true}
@@ -55,9 +57,11 @@ const About = async () => {
                   <h1 className="Heading xl:subHeading mb-4">
                     {Founder.Title}
                   </h1>
-                  <div className="font-normal leading-loose text text-center w-full xl:px-20 ">
+                  <div className="font-normal leading-relaxed text text-center w-full xl:px-16 ">
                     {Founder.achievements.map((achievement, idx) => (
-                      <p key={idx}>- {achievement}</p>
+                      <p key={idx} className="my-2">
+                        {achievement}
+                      </p>
                     ))}
                   </div>
                 </div>
@@ -66,7 +70,7 @@ const About = async () => {
           </div>
         </section>
         <section className="w-full h-fit px-4 lg:px-12 space-y-4 flex flex-col items-center ">
-          <h1 className=" xl:Title Heading">Why Choose Us</h1>
+          <h1 className=" xl:Title Heading text-blue-900">Why Choose Us</h1>
           <div className=" flex lg:gap-10 w-full overflow-x-auto h-full py-4 no-scrollbar scroll-smooth">
             {response.aboutUsList1.map((reasons, index) => (
               <Datacard Reasons={reasons} key={index} />

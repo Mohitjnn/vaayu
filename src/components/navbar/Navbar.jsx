@@ -24,7 +24,7 @@ function Navbar() {
 
   return (
     <div
-      className={`w-full flex flex-col xl:flex-row justify-between items-between xl:items-center px-4 lg:px-8 xl:px-14 z-30 h-fit  bg-black/20 backdrop-blur-sm top-0 text-white 
+      className={`w-full flex flex-col xl:flex-row justify-between items-between xl:items-center px-4 lg:px-8 xl:px-14 z-30 h-fit bg-black/20 backdrop-blur-lg top-0 text-white 
         ${pathname === "/" || pathname === "/schools" ? "fixed " : "sticky "}
       `}
     >
@@ -71,7 +71,7 @@ function Navbar() {
           >
             <path
               d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10ZM9.17 14.83l5.66-5.66M14.83 14.83 9.17 9.17"
-              stroke="#000000"
+              stroke="#ffffff"
               strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -87,7 +87,7 @@ function Navbar() {
           >
             <path
               d="M3 4.5h18M3 9.5h18M3 14.5h18M3 19.5h18"
-              stroke="#000000"
+              stroke="#ffffff"
               strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"

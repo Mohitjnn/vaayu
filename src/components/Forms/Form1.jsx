@@ -5,7 +5,7 @@ import { basicSchema1 } from "@/schemas";
 const formUrl =
   "https://script.google.com/macros/s/AKfycbzIDO9WfxaGMHtttPfKg5roVUERVKMrht19l32tAhpyCJQANxCgbooxcBZn02D5Ifs/exec";
 
-function Form1() {
+function Form1({ scrollToForm }) {
   const [successMessage, setSuccessMessage] = useState("");
 
   const { values, handleBlur, touched, handleChange, errors, handleSubmit } =
@@ -59,7 +59,7 @@ function Form1() {
         id="formType"
         name="formType"
         value={values.formType}
-      ></input>
+      />
       <label
         htmlFor="name"
         className={`font-semibold ${
@@ -132,6 +132,7 @@ function Form1() {
         type="text"
         placeholder="Phone Number"
       />
+
       <label
         htmlFor="desc"
         className={`font-semibold ${
@@ -151,12 +152,22 @@ function Form1() {
         placeholder="A short description of your questions"
         className={`input ${
           errors.desc && touched.desc ? "border-2 border-red-600" : ""
-        } `}
+        }`}
       />
 
-      <button type="submit" className="Btnlight rounded-lg py-2 Text">
-        Submit
-      </button>
+      <div className="flex space-x-4 w-full items-center justify-center">
+        <button type="submit" className="Btnlight rounded-lg py-2 Text">
+          Submit
+        </button>
+        <span className="mx-4 text"> Or</span>
+        <button
+          type="button"
+          onClick={() => scrollToForm("form2")}
+          className="Btnlight bg-white border-2 border-blue-500 text-blue-500 rounded-lg py-2 Text"
+        >
+          Join Us
+        </button>
+      </div>
 
       {successMessage && <p className="text-green-500">{successMessage}</p>}
     </form>

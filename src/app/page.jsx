@@ -42,7 +42,7 @@ export default async function Home() {
               />
             </div>
             <div className="flex flex-col space-y-8 px-8 lg:px-4 mt-10 lg:my-0  lg:w-[45%] xl:w-[45%] justify-between items-center lg:items-start xl:justify-left text-justify">
-              <h1 className="Heading lg:Title">ABOUT US</h1>
+              <h1 className="Heading lg:Title text-blue-900">ABOUT US</h1>
               <p className="lg:text-lg xl:text-xl text-sm leading-relaxed font-medium">
                 <span className="font-semibold">VAAYUN </span>
                 {response.desc.homePage1}
@@ -57,7 +57,9 @@ export default async function Home() {
           </div>
         </section>
         <section className="flex flex-col items-center w-full px-4 xl:px-16 lg:mt-14 space-y-4 xl:space-y-10">
-          <h1 className="lg:Title Heading mt-10">WE CAPTURE EVERY MOMENT.</h1>
+          <h1 className="lg:Title Heading mt-10 text-blue-900">
+            WE CAPTURE EVERY MOMENT.
+          </h1>
           <p className="lg:text-xl Text lg:w-1/2 xl:w-1/3">
             Know more about Vaayun and Stay updated in every possible way!
           </p>
@@ -85,7 +87,7 @@ export default async function Home() {
           </button>
         </section>
         <section className="w-full mt-16 h-full xl:h-fit px-4 xl:px-16 flex flex-col items-center">
-          <h1 className="xl:Title Heading font-bold mb-10 xl:mb-16">
+          <h1 className="lg:Title Heading font-bold mb-10 xl:mb-16 text-blue-900">
             Achievements
           </h1>
           {response?.achievements.map((achievement, index) => (

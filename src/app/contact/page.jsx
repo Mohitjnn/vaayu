@@ -22,7 +22,7 @@ function Contact() {
     <main className="w-full h-full">
       <center className="w-full h-full px-4 md:px-0 xl:px-16">
         <section className="flex flex-col xl:flex-row w-full h-full justify-between items-start xl:space-x-6 xl:space-y-0">
-          <div className="hidden md:block md:w-full xl:w-[45%] relative md:h-[45vh] xl:h-[85vh] bg-custom-gradient  xl:rounded-br-[20%] xl:my-5">
+          <div className="hidden md:block md:w-full xl:w-[45%] relative md:h-[45vh] xl:h-[85vh] bg-custom-gradient xl:rounded-br-[20%] xl:my-5">
             <Image
               src="/static/images/ContactUs.png"
               fill={true}
@@ -33,29 +33,22 @@ function Contact() {
             />
           </div>
           <div
-            className="flex flex-col w-full xl:w-[50%] h-full items-start my-4 px-4  justify-start"
+            className="flex flex-col w-full xl:w-[50%] h-full items-start my-4 px-4 justify-start"
             ref={formContainerRef}
           >
-            <div className="flex items-center justify-between w-full py-2">
-              <div className="flex items-center space-x-4 justify-center w-full">
-                <button
-                  onClick={() => scrollToForm("form1")}
-                  className=" Btnlight py-2"
-                >
-                  CONTACT US
-                </button>
-                <button
-                  onClick={() => scrollToForm("form2")}
-                  className=" Btnlight py-2 "
-                >
-                  JOIN US
-                </button>
-              </div>
-            </div>
-            <h1 className="Heading text-blue-500">
+            <h1 className="Title text-blue-900 text-center w-full">
               {isForm1Visible ? "Contact Us" : "Join Us"}
             </h1>
-            {isForm1Visible ? <Form1 /> : <Form2 />}
+            <p className="text-m w-full text-center">
+              {isForm1Visible
+                ? "We're here to help and answer any questions you may have."
+                : "Fill out this form to become a part of our esteemed organization."}
+            </p>
+            {isForm1Visible ? (
+              <Form1 scrollToForm={scrollToForm} />
+            ) : (
+              <Form2 scrollToForm={scrollToForm} />
+            )}
           </div>
         </section>
       </center>
