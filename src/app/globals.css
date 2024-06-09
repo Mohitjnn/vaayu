@@ -22,7 +22,7 @@
 
   /* fonts */
   .Title {
-    @apply md:text-6xl text-4xl font-bold md:font-extrabold;
+    @apply md:text-6xl text-4xl font-black;
   }
 
   .Heading {

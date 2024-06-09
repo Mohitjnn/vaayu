@@ -17,12 +17,10 @@ const About = async () => {
               <h1 className="subHeading font-semibold text-blue-500">
                 Know Everything...About Us
               </h1>
-              <h1 className="Title font-bold lg:font-black text-blue-800">
-                ABOUT VAAYUN
-              </h1>
+              <h1 className="Title font-black text-blue-800">ABOUT VAAYUN</h1>
             </div>
             <p className="text-m xl:text  px-4 xl:mx-20 w-fit text-justify leading-8 xl:leading-9">
-              <span className=" font-semibold">VAAYUN INDIA </span>
+              <span className=" font-semibold">VAAYUN </span>
               {response.desc.aboutUsPage}
             </p>
           </div>
@@ -36,7 +34,7 @@ const About = async () => {
           </div>
         </section>
         <section className="w-full h-fit xl:px-16 my-16 flex flex-col items-center">
-          <h1 className="Heading xl:Title text-blue-900">Founders</h1>
+          <h1 className="Title text-blue-900">Founders</h1>
           <div className="flex xl:flex-row flex-col w-full h-fit my-16 justify-between items-start space-y-0 xl:space-x-6">
             {response.Founders.map((Founder, index) => (
               <div
