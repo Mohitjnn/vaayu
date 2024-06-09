@@ -68,7 +68,7 @@ const About = async () => {
           </div>
         </section>
         <section className="w-full h-fit px-4 lg:px-12 space-y-4 flex flex-col items-center ">
-          <h1 className=" xl:Title Heading text-blue-900">Why Choose Us</h1>
+          <h1 className=" Title  text-blue-900">Why Choose Us</h1>
           <div className=" flex lg:gap-10 w-full overflow-x-auto h-full py-4 no-scrollbar scroll-smooth">
             {response.aboutUsList1.map((reasons, index) => (
               <Datacard Reasons={reasons} key={index} />
