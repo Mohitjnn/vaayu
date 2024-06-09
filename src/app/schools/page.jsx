@@ -41,6 +41,7 @@ export default async function School() {
                 <Image
                   src={response.schoolPageImages.coachImage1.Url}
                   fill={true}
+                  priority={true}
                   objectFit="cover"
                   alt="coaches picture1"
                 />
@@ -49,6 +50,7 @@ export default async function School() {
                 <Image
                   src={response.schoolPageImages.coachImage2.Url}
                   fill={true}
+                  priority={true}
                   objectFit="cover"
                   alt="coaches picture2"
                 />

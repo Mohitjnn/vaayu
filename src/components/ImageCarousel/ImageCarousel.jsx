@@ -34,6 +34,7 @@ const ImageCarousel = ({ images = [] }) => {
           <Image
             src={image.Url}
             alt={image.title}
+            priority={true}
             fill={true}
             objectFit="cover"
             className="w-full h-full"
