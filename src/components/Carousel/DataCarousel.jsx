@@ -2,14 +2,11 @@
 import Image from "next/image";
 import React, { useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { usePathname } from "next/navigation";
 
 const DataCarousel = ({ Reasons = [] }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
-    skipSnaps: false,
   });
-  const pathname = usePathname();
 
   useEffect(() => {
     if (emblaApi) {
@@ -26,15 +23,15 @@ const DataCarousel = ({ Reasons = [] }) => {
   }, [emblaApi]);
 
   return (
-    <div className="lg:gap-10 w-full h-full scroll-smooth ">
+    <div className="lg:gap-10 w-full h-full ">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {Reasons.map((Reason, index) => (
             <div
-              className="flex-none h-fit w-[46vh] p-4 mx-4 lg:mx-20 my-4 transition-transform duration-300 ease-in-out transform hover:scale-110"
+              className="flex-none h-fit w-[45vh] mx-4 lg:mx-20 my-4 transition-transform duration-300 ease-in-out transform hover:scale-110 min-w-0"
               key={index}
             >
-              <div className="w-[40vh] h-[40vh] relative ">
+              <div className="w-[45vh] h-[40vh] relative ">
                 <Image
                   src={`${Reason.imageSrc}`}
                   fill={true}
