@@ -16,7 +16,7 @@ export default async function School() {
         <section className="relative w-full h-[50vh] lg:h-[60vh] flex items-center">
           <div className="absolute w-full h-fit z-0">
             <div className="relative w-full h-[50vh] lg:h-[60vh]">
-              <ImageCarousel images={response.schoolPageImages.Carousel} />
+              <ImageCarousel images={response.schoolPageImages?.Carousel} />
             </div>
           </div>
           <div
