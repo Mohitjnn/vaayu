@@ -16,7 +16,7 @@ export default async function School() {
         <section className="relative w-full h-[50vh] lg:h-[60vh] flex items-center">
           <div className="absolute w-full h-fit z-0">
             <div className="relative w-full h-[50vh] lg:h-[60vh]">
-              <ImageCarousel images={response.schoolPageImages?.Carousel} />
+              <ImageCarousel images={response.schoolPageImages.Carousel} />
             </div>
           </div>
           <div
@@ -39,7 +39,7 @@ export default async function School() {
             <div className="flex w-full justify-around lg:px-14">
               <div className="px-4 relative w-full lg:w-[40%] h-[40vh] lg:h-[60vh] mt-10">
                 <Image
-                  src={response.schoolPageImages?.coachImage1.Url}
+                  src={response.schoolPageImages.coachImage1.Url}
                   fill={true}
                   objectFit="cover"
                   alt="coaches picture1"
@@ -47,7 +47,7 @@ export default async function School() {
               </div>
               <div className="relative hidden lg:block px-4 w-[40%] h-[40vh] lg:h-[60vh] mt-10">
                 <Image
-                  src={response.schoolPageImages?.coachImage2.Url}
+                  src={response.schoolPageImages.coachImage2.Url}
                   fill={true}
                   objectFit="cover"
                   alt="coaches picture2"
@@ -56,7 +56,7 @@ export default async function School() {
             </div>
             <Transition>
               <div className="flex flex-col space-y-8 px-8 lg:px-4 mt-10 justify-between items-center text-justify">
-                {response.schoolPageData?.map((schoolData, index) => (
+                {response.schoolPageData.map((schoolData, index) => (
                   <p
                     key={index}
                     className="text-sm lg:text-lg xl:text-xl leading-relaxed font-medium pl-4 my-4 w-full border-l-4"
