@@ -56,7 +56,7 @@ export default async function School() {
             </div>
             <Transition>
               <div className="flex flex-col space-y-8 px-8 lg:px-4 mt-10 justify-between items-center text-justify">
-                {response.schoolPageData.map((schoolData, index) => (
+                {response.schoolPageData?.map((schoolData, index) => (
                   <p
                     key={index}
                     className="text-sm lg:text-lg xl:text-xl leading-relaxed font-medium pl-4 my-4 w-full border-l-4"
