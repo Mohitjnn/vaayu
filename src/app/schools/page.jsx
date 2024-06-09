@@ -39,7 +39,7 @@ export default async function School() {
             <div className="flex w-full justify-around lg:px-14">
               <div className="px-4 relative w-full lg:w-[40%] h-[40vh] lg:h-[60vh] mt-10">
                 <Image
-                  src={response.schoolPageImages.coachImage1.Url}
+                  src={response.schoolPageImages?.coachImage1.Url}
                   fill={true}
                   objectFit="cover"
                   alt="coaches picture1"
