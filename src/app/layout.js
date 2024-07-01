@@ -15,9 +15,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.className} w-full h-full`}>
-        <Navbar />
+        <center className="Heading">Under Maintainance</center>
+        {/* <Navbar />
         {children}
-        <Footer />
+        <Footer /> */}
       </body>
     </html>
   );
