@@ -43,6 +43,13 @@
     @apply text-white bg-blue-500 rounded-[30px] w-fit px-[7%] py-2 md:py-3 h-fit;
   }
 
+  .embla__dot {
+    /* Inherit styles from the default Tailwind button classes */
+    @apply inline-flex h-4 w-4 items-center justify-center rounded-full p-0 mx-2 cursor-pointer bg-gray-300;
+
+  }
+
+
   /* form */
 
   .input {

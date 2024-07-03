@@ -3,6 +3,7 @@ import getData from "@/customHook/datafetch";
 import Link from "next/link";
 import Transition from "@/animations/transition";
 import ImageCarousel from "@/components/Carousel/ImageCarousel";
+import DotCarousel from "@/components/Carousel/DotCarousel";
 
 export default async function Home() {
   const response = await getData();
@@ -64,7 +65,8 @@ export default async function Home() {
             Know more about Vaayun and Stay updated in every possible way!
           </p>
           <div className=" flex lg:gap-14 w-full overflow-x-auto h-full py-4 no-scrollbar">
-            {response?.newsletterContent.map((news, index) => (
+            <DotCarousel Reasons={response?.newsletterContent} />
+            {/* {response?.newsletterContent.map((news, index) => (
               <div
                 className="flex flex-col mx-8 lg:mx-12 h-fit w-full "
                 key={index}
@@ -80,7 +82,7 @@ export default async function Home() {
                 </div>
                 <p className="subHeading mt-8">{news.Title}</p>
               </div>
-            ))}
+            ))} */}
           </div>
           <button className="Btnlight text">
             <Link href="/newsletter">BROWSE NEWSLETTER</Link>

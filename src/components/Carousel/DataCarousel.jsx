@@ -49,7 +49,7 @@ const DataCarousel = ({ Reasons = [] }) => {
           ))}
         </div>
       </div>
-      <button className="hidden lg:inline mx-4" onClick={scrollPrev}>
+      <button className="inline mx-4" onClick={scrollPrev}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="50"
@@ -63,7 +63,7 @@ const DataCarousel = ({ Reasons = [] }) => {
           ></path>
         </svg>
       </button>
-      <button className="hidden lg:inline  mx-4" onClick={scrollNext}>
+      <button className="inline  mx-4" onClick={scrollNext}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="50"
