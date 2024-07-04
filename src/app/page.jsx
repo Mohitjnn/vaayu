@@ -36,8 +36,9 @@ export default async function Home() {
             </div>
           </section>
         </ParallaxScroll>
-        <section className="relative z-20 bg-white w-full flex flex-col-reverse items-center justify-center h-fit lg:flex-row xl:px-20 pt-20 xl:py-24 lg:px-10 lg:my-20">
+        <section className="relative z-20 bg-white w-full flex flex-col-reverse items-center justify-center h-fit lg:flex-row xl:px-20 pt-16 xl:py-24 lg:px-10 lg:my-20">
           <div className="flex w-full lg:flex-row-reverse flex-col h-fit justify-between">
+            <h1 className="lg:hidden Title text-blue-900 pb-4 ">ABOUT US</h1>
             <div className="lg:w-[50%] xl:w-[40%] px-4 relative h-[40vh] lg:h-[75vh] xl:h-[75vh] ">
               <Image
                 src="/static/images/AboutUsPicture.png"
@@ -48,7 +49,9 @@ export default async function Home() {
             </div>
             <div className="flex flex-col space-y-8 px-8 lg:px-4 mt-10 lg:my-0 lg:w-[45%] xl:w-[45%] justify-between items-center lg:items-start xl:justify-left text-justify">
               <TransitionVertical>
-                <h1 className="Title text-blue-900">ABOUT US</h1>
+                <h1 className="hidden lg:block Title text-blue-900">
+                  ABOUT US
+                </h1>
               </TransitionVertical>
               <TransitionVertical>
                 <p className="lg:text-lg xl:text-xl text-sm leading-relaxed font-medium">

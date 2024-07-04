@@ -3,16 +3,16 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
+import AutoScroll from "embla-carousel-auto-scroll";
 
 const DotCarousel = ({ Reasons = [] }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
+      // Adjust the speed for smooth transitions
     },
-    [Autoplay({ delay: 2500 })]
+    [AutoScroll({ speed: 1.5, stopOnInteraction: false })]
   );
-
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
 

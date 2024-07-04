@@ -12,7 +12,12 @@ function Footer() {
         </h1>
         <div className="text text-center font-normal opacity-65 px-4 md:space-y-4 lg:space-y-0 pb-2">
           <p>Developed by</p>
-          <p>Mohit Jain</p>
+          <Link
+            href="https://www.linkedin.com/in/mohit-jain-197515254/"
+            target="_blank"
+          >
+            Mohit Jain
+          </Link>
           <p className="text font-normal text-center ">
             @2024 | Vaayun | All Rights Reserved
           </p>
