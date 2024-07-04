@@ -62,11 +62,8 @@ export default async function School() {
             <TransitionVertical>
               <div className="flex flex-col space-y-8 px-8 lg:px-4 mt-10 justify-between items-center text-justify">
                 {response.schoolPageData.map((schoolData, index) => (
-                  <TransitionVertical>
-                    <p
-                      key={index}
-                      className="text-sm lg:text-lg xl:text-xl leading-relaxed font-medium pl-4 my-4 w-full"
-                    >
+                  <TransitionVertical key={index}>
+                    <p className="text-sm lg:text-lg xl:text-xl leading-relaxed font-medium pl-4 my-4 w-full">
                       <span className="text-xl font-bold mr-2">
                         {index + 1}.
                       </span>
