@@ -4,7 +4,7 @@ import Link from "next/link";
 import ImageCarousel from "@/components/Carousel/ImageCarousel";
 import DotCarousel from "@/components/Carousel/DotCarousel";
 import BgColour from "@/animations/BackgroundColour";
-import TransitionVertical from "@/animations/TransitionVertical";
+import TransitionVertical from "@/animations/transitionVertical";
 import ParallaxScroll from "@/animations/ParallaxScroll";
 
 export default async function Home() {
