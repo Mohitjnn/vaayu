@@ -152,9 +152,9 @@
   ],
   "schoolPageImages": {
     "Carousel": [
-      { "title": "image1", "Url": "/static/images/AboutUsPicture2.jpg" },
       { "title": "image3", "Url": "/static/images/schoolsImage3.png" },
       { "title": "image4", "Url": "/static/images/schoolsImage2.png" },
+      { "title": "image1", "Url": "/static/images/AboutUsPicture2.jpg" },
       { "title": "image5", "Url": "/static/images/schoolsImage5.png" },
       { "title": "image6", "Url": "/static/images/schoolsImage4.png" }
     ],
