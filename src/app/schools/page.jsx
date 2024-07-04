@@ -1,7 +1,7 @@
 import Image from "next/image";
 import getData from "@/customHook/datafetch";
 import Link from "next/link";
-import Transition from "@/animations/transition";
+import TransitionVertical from "@/animations/transitionVertical";
 import ImageCarousel from "@/components/Carousel/ImageCarousel";
 
 export default async function School() {
@@ -23,14 +23,14 @@ export default async function School() {
             className="relative w-full h-full flex justify-center xl:justify-evenly items-center flex-col z-20 xl:space-y-8 py-10 xl:py-40 px-4 xl:px-60"
             style={{ textShadow: "4px 2px 13px black" }}
           >
-            <Transition>
+            <TransitionVertical>
               <h1 className="text-pretty xl:text-center Title text-white xl:leading-relaxed xl:my-4">
                 GOOD NEWS
               </h1>
               <p className="subHeading text-white">
                 WE NOW PROVIDE COACHES TO SCHOOLS AS WELL
               </p>
-            </Transition>
+            </TransitionVertical>
           </div>
         </section>
         <section className="relative flex flex-col-reverse items-center justify-center h-fit lg:flex-col w-full xl:px-20 lg:px-10 lg:mt- mt-10">
@@ -56,7 +56,7 @@ export default async function School() {
                 />
               </div>
             </div>
-            <Transition>
+            <TransitionVertical>
               <div className="flex flex-col space-y-8 px-8 lg:px-4 mt-10 justify-between items-center text-justify">
                 {response.schoolPageData.map((schoolData, index) => (
                   <p
@@ -77,7 +77,7 @@ export default async function School() {
                   </Link>
                 </p>
               </div>
-            </Transition>
+            </TransitionVertical>
           </div>
         </section>
       </center>

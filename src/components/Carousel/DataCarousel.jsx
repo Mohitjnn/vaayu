@@ -28,7 +28,7 @@ const DataCarousel = ({ Reasons = [] }) => {
         <div className="flex">
           {Reasons.map((Reason, index) => (
             <div
-              className="flex-none h-fit w-[45vh] mx-4 lg:mx-20 my-4 transition-transform duration-300 ease-in-out transform hover:scale-110 min-w-0"
+              className="flex-none h-fit w-[45vh] mx-4 lg:mx-20 my-4 transitionVertical-transform duration-300 ease-in-out transform hover:scale-110 min-w-0"
               key={index}
             >
               <div className="w-[45vh] h-[40vh] relative ">

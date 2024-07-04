@@ -27,7 +27,7 @@ const ImageCarousel = ({ images = [] }) => {
       {images.map((image, index) => (
         <div
           key={index}
-          className={`transition-opacity duration-1000 ${
+          className={`transitionVertical-opacity duration-1000 ${
             index === currentImageIndex ? "opacity-100" : "opacity-0"
           }`}
         >

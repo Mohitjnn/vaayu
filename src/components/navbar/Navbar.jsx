@@ -1,9 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
-import Transition from "@/animations/transition";
+import TransitionVertical from "@/animations/transitionVertical";
 
 const Links = [
   { name: "Home", url: "/" },
@@ -24,20 +23,14 @@ function Navbar() {
 
   return (
     <div
-      className={`w-full flex flex-col xl:flex-row justify-between items-between xl:items-center px-4 lg:px-8 xl:px-14 z-30 h-fit bg-black/20 backdrop-blur-lg top-0 text-white 
+      className={`w-full flex flex-row-reverse xl:flex-row justify-between items-between xl:items-center px-4 lg:px-8 xl:px-14 z-30 h-fit bg-black/20 backdrop-blur-lg top-0 text-white 
         ${pathname === "/" || pathname === "/schools" ? "fixed " : "sticky "}
       `}
     >
-      <div className="flex xl:justify-evenly items-center w-fit xl:w-fit h-fit py-2">
-        <Image
-          src="/static/images/logo.png"
-          height={70}
-          width={70}
-          alt="VAAYUN logo"
-        />
+      <div className="flex xl:justify-evenly items-center w-fit xl:w-fit h-fit ">
         <Link
           href="/"
-          className="text-lg font-bold xl:font-black"
+          className="text-2xl font-bold xl:font-black py-6"
           onClick={() => setActiveLink("/")}
         >
           VAAYUN
@@ -58,7 +51,7 @@ function Navbar() {
         ))}
       </div>
       <button
-        className="xl:hidden absolute right-0 m-6"
+        className="xl:hidden absolute left-0 m-5"
         onClick={() => setOpen((prev) => !prev)}
       >
         {Open ? (
@@ -108,7 +101,7 @@ function Navbar() {
               setActiveLink(link.url);
             }}
           >
-            <Transition key={link.url}>{link.name}</Transition>
+            <TransitionVertical key={link.url}>{link.name}</TransitionVertical>
           </Link>
         ))}
       </div>

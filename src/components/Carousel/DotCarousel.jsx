@@ -10,7 +10,7 @@ const DotCarousel = ({ Reasons = [] }) => {
     {
       loop: true,
     },
-    [Autoplay()]
+    [Autoplay({ delay: 2500 })]
   );
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
