@@ -24,7 +24,11 @@ function Navbar() {
   return (
     <div
       className={`w-full flex flex-row-reverse xl:flex-row justify-between items-between xl:items-center px-4 lg:px-8 xl:px-14 z-30 h-fit bg-black/20 backdrop-blur-lg top-0 text-white 
-        ${pathname === "/" || pathname === "/schools" ? "fixed " : "sticky "}
+        ${
+          pathname === "/" || pathname === "/schools" || pathname === "/about"
+            ? "fixed "
+            : "sticky "
+        }
       `}
     >
       <div className="flex xl:justify-evenly items-center w-fit xl:w-fit h-fit ">

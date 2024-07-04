@@ -4,7 +4,7 @@ import Link from "next/link";
 import ImageCarousel from "@/components/Carousel/ImageCarousel";
 import DotCarousel from "@/components/Carousel/DotCarousel";
 import BgColour from "@/animations/BackgroundColour";
-import TransitionVertical from "@/animations/transitionVertical";
+import TransitionVertical from "@/animations/TransitionVertical";
 import ParallaxScroll from "@/animations/ParallaxScroll";
 
 export default async function Home() {
@@ -18,22 +18,22 @@ export default async function Home() {
       <center className="w-full h-fit">
         <ParallaxScroll>
           <section className="relative w-full h-[90vh] xl:h-[110vh] flex items-center">
-            <div className="absolute w-full h-full z-0">
+            <div className="absolute top-0 w-full h-full z-0">
               <ImageCarousel images={response.homePageImages} />
             </div>
-            <div
-              className="relative w-full h-full flex justify-center xl:justify-evenly items-center flex-col z-20 xl:space-y-8 py-10 xl:py-40 px-4 xl:px-60 bg-opacity-50"
-              style={{ textShadow: "4px 2px 13px black" }}
-            >
-              <TransitionVertical>
+            <TransitionVertical>
+              <div
+                className="relative w-full h-full flex justify-center xl:justify-evenly items-center flex-col z-10 xl:space-y-8 py-10 xl:py-40 px-4 xl:px-60 bg-opacity-50"
+                style={{ textShadow: "4px 2px 13px black" }}
+              >
                 <h1 className="text-pretty xl:text-center Title text-white xl:leading-relaxed xl:my-4">
                   EMPOWERING THE NEXT GENERATION OF ATHLETES
                 </h1>
                 <p className="text text-white">
                   REVOLUTIONIZING SPORTS EDUCATION
                 </p>
-              </TransitionVertical>
-            </div>
+              </div>
+            </TransitionVertical>
           </section>
         </ParallaxScroll>
         <section className="relative z-20 bg-white w-full flex flex-col-reverse items-center justify-center h-fit lg:flex-row xl:px-20 pt-16 xl:py-24 lg:px-10 lg:my-20">

@@ -9,7 +9,7 @@ export default function CardFlip({ children }) {
       whileInView={{ opacity: 1, rotateY: "180deg" }}
       transition={{
         ease: "easeInOut",
-        duration: 2.5,
+        duration: 1,
         delayChildren: 1,
       }}
     >

@@ -11,7 +11,7 @@ const DotCarousel = ({ Reasons = [] }) => {
       loop: true,
       // Adjust the speed for smooth transitions
     },
-    [AutoScroll({ speed: 1.5, stopOnInteraction: false })]
+    [AutoScroll({ speed: 2.5, stopOnInteraction: false })]
   );
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
