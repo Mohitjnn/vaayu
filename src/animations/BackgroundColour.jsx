@@ -16,12 +16,6 @@ export default function BgColour({ children }) {
   const scale = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
-  useEffect(() => {
-    if (ref.current) {
-      console.log("BgColour component mounted", ref.current);
-    }
-  }, []);
-
   // Conditionally return based on `isSupported`
   if (!isSupported) {
     return (

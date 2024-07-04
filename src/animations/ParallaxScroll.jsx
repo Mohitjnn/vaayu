@@ -15,12 +15,6 @@ export default function ParallaxScroll({ children }) {
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
-  useEffect(() => {
-    if (ref.current) {
-      console.log("ParallaxScroll component mounted", ref.current);
-    }
-  }, []);
-
   // Conditionally return based on `isSupported`
   if (!isSupported) {
     return <div className="z-0">{children}</div>;
