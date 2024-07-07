@@ -23,7 +23,7 @@ function Navbar() {
 
   return (
     <div
-      className={`w-full flex flex-row-reverse xl:flex-row justify-between items-between xl:items-center px-4 lg:px-8 xl:px-14 z-30 h-fit bg-black/20 backdrop-blur-lg top-0 text-white 
+      className={`w-full flex flex-row-reverse xl:flex-row justify-between items-between xl:items-center px-4 lg:px-8 xl:px-14 z-30 h-fit bg-black/20 backdrop-blur-[10px] text-white 
         ${
           pathname === "/" || pathname === "/schools" || pathname === "/about"
             ? "fixed "
@@ -97,15 +97,17 @@ function Navbar() {
           <Link
             href={link.url}
             key={link.url}
-            className={`text font-extralight hover:underline underline-offset-4 ${
-              activeLink === link.url ? "text-blue-500 underline" : ""
+            className={`text-xl font-semibold hover:underline underline-offset-4 ${
+              activeLink === link.url ? "text-blue-400 underline" : ""
             }`}
             onClick={() => {
               setOpen((prev) => !prev);
               setActiveLink(link.url);
             }}
           >
-            <TransitionVertical key={link.url}>{link.name}</TransitionVertical>
+            <TransitionVertical key={link.url}>
+              • {link.name}
+            </TransitionVertical>
           </Link>
         ))}
       </div>

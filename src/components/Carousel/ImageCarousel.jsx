@@ -21,7 +21,7 @@ const ImageCarousel = ({ images = [] }) => {
   return (
     <div
       className={`relative w-full ${
-        pathname === "/" ? "h-[85vh] xl:h-[110vh]" : "h-[50vh] lg:h-[80vh]"
+        pathname === "/" ? "h-[90vh] xl:h-[100vh]" : "h-[50vh] lg:h-[80vh]"
       }`}
     >
       {images.map((image, index) => (

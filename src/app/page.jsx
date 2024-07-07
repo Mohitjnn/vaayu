@@ -16,30 +16,32 @@ export default async function Home() {
   return (
     <main>
       <center className="w-full h-fit">
-        <ParallaxScroll>
-          <section className="relative w-full h-[90vh] xl:h-[110vh] flex items-center">
-            <div className="absolute top-0 w-full h-full z-0">
-              <ImageCarousel images={response.homePageImages} />
-            </div>
-            <TransitionVertical>
-              <div
-                className="relative w-full h-full flex justify-center xl:justify-evenly items-center flex-col z-10 xl:space-y-8 py-10 xl:py-40 px-4 xl:px-60 bg-opacity-50"
-                style={{ textShadow: "4px 2px 13px black" }}
-              >
-                <h1 className="text-pretty xl:text-center Title text-white xl:leading-relaxed xl:my-4">
-                  EMPOWERING THE NEXT GENERATION OF ATHLETES
-                </h1>
-                <p className="text text-white">
-                  REVOLUTIONIZING SPORTS EDUCATION
-                </p>
+        <section className="relative w-full h-[90vh] xl:h-[100vh] flex items-center">
+          <div className="w-full h-fit absolute z-0">
+            <ParallaxScroll>
+              <div className="relative w-full h-[90vh] lg:h-[100vh] z-0">
+                <ImageCarousel images={response.homePageImages} />
               </div>
+            </ParallaxScroll>
+          </div>
+          <div
+            className="relative w-full h-full flex justify-center xl:justify-evenly items-center flex-col z-20 xl:space-y-8 py-10 xl:py-40 px-4 xl:px-60"
+            style={{ textShadow: "4px 2px 13px black" }}
+          >
+            <TransitionVertical>
+              <h1 className="text-pretty xl:text-center Title text-white xl:leading-relaxed xl:my-4">
+                EMPOWERING THE NEXT GENERATION OF ATHLETES
+              </h1>
+              <p className="text text-white">
+                REVOLUTIONIZING SPORTS EDUCATION
+              </p>
             </TransitionVertical>
-          </section>
-        </ParallaxScroll>
-        <section className="relative z-20 bg-white w-full flex flex-col-reverse items-center justify-center h-fit lg:flex-row xl:px-20 pt-16 xl:py-24 lg:px-10 lg:my-20">
+          </div>
+        </section>
+        <section className="relative z-20 bg-white flex flex-col-reverse items-center justify-center h-fit lg:flex-col w-full xl:px-20 lg:px-10 pt-16 xl:py-20">
           <div className="flex w-full lg:flex-row-reverse flex-col h-fit justify-between">
-            <h1 className="lg:hidden Title text-blue-900 pb-4 ">ABOUT US</h1>
-            <div className="lg:w-[50%] xl:w-[40%] px-4 relative h-[40vh] lg:h-[75vh] xl:h-[75vh] ">
+            <h1 className="lg:hidden Title text-blue-900 pb-4">ABOUT US</h1>
+            <div className="lg:w-[50%] xl:w-[40%] px-4 relative h-[40vh] lg:h-[75vh] xl:h-[75vh]">
               <Image
                 src="/static/images/AboutUsPicture.png"
                 layout="fill"
@@ -107,7 +109,7 @@ export default async function Home() {
                 </div>
                 <div className="w-full lg:w-[40%] xl:my-0 text-left space-y-4 lg:space-y-8 flex flex-col">
                   <h1 className="subHeading xl:Heading">{achievement.title}</h1>
-                  <p className="text xl:subHeading xl:font-normal ">
+                  <p className="text xl:subHeading xl:font-normal">
                     {achievement.description}
                   </p>
                 </div>
