@@ -61,8 +61,5 @@
     @apply border-2 border-gray-500 rounded-lg h-fit p-3 outline-none w-[100%];
   }
 
-  /* nav responsive */
-  .MobileLinks {
-    @apply absolute top-6 left-0 w-full h-fit mt-14 bg-black/20 backdrop-blur-[10px] text-white flex flex-col items-center space-y-4 z-50 rounded-b-3xl p-4;
-  }
+
 }

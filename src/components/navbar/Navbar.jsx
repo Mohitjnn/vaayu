@@ -34,7 +34,7 @@ function Navbar() {
 
   return (
     <div
-      className={`w-full flex flex-row-reverse xl:flex-row justify-between items-between xl:items-center px-4 lg:px-8 xl:px-14 z-30 h-fit bg-black/20 backdrop-blur-[10px] text-white 
+      className={`w-full flex flex-col xl:flex-row justify-between items-between xl:items-center px-4 lg:px-8 xl:px-14 z-30 h-fit bg-black/20 backdrop-blur-[10px] text-white 
         ${
           pathname === "/" ||
           pathname === "/schools" ||
@@ -42,70 +42,76 @@ function Navbar() {
             ? "fixed "
             : "sticky top-0"
         }
-      `}
+      ${Open ? "rounded-b-3xl" : ""}`}
     >
-      <div className="flex xl:justify-evenly items-center w-fit xl:w-fit h-fit ">
-        <Link
-          href="/"
-          className="text-2xl font-bold xl:font-black py-6"
-          onClick={() => setActiveLink("/")}
-        >
-          VAAYUN
-        </Link>
-      </div>
-      <div className="hidden xl:flex xl:flex-row xl:space-x-6">
-        {Links.map((link) => (
+      <div className="w-full flex flex-row-reverse xl:flex-row justify-between xl:items-center">
+        <div className="flex xl:justify-evenly items-center w-fit xl:w-fit h-fit ">
           <Link
-            href={link.url}
-            key={link.url}
-            className={`text-m font-extralight hover:underline underline-offset-4 ${
-              activeLink === link.url ? "text-blue-500 underline" : ""
-            }`}
-            onClick={() => setActiveLink(link.url)}
+            href="/"
+            className="text-2xl font-bold xl:font-black py-6"
+            onClick={() => setActiveLink("/")}
           >
-            {link.name}
+            VAAYUN
           </Link>
-        ))}
+        </div>
+        <div className="hidden xl:flex xl:flex-row xl:space-x-6">
+          {Links.map((link) => (
+            <Link
+              href={link.url}
+              key={link.url}
+              className={`text-m font-extralight hover:underline underline-offset-4 ${
+                activeLink === link.url ? "text-blue-500 underline" : ""
+              }`}
+              onClick={() => setActiveLink(link.url)}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+        <button
+          className="xl:hidden absolute left-0 m-5"
+          onClick={() => setOpen((prev) => !prev)}
+        >
+          {Open ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="38"
+              height="38"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10ZM9.17 14.83l5.66-5.66M14.83 14.83 9.17 9.17"
+                stroke="#ffffff"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="38"
+              height="38"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M3 4.5h18M3 9.5h18M3 14.5h18M3 19.5h18"
+                stroke="#ffffff"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>
+            </svg>
+          )}
+        </button>
       </div>
-      <button
-        className="xl:hidden absolute left-0 m-5"
-        onClick={() => setOpen((prev) => !prev)}
+      <div
+        className={`flex flex-col items-center space-y-6 w-full pb-10 xl:hidden ${
+          Open ? "" : "hidden"
+        }`}
       >
-        {Open ? (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="38"
-            height="38"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10ZM9.17 14.83l5.66-5.66M14.83 14.83 9.17 9.17"
-              stroke="#ffffff"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            ></path>
-          </svg>
-        ) : (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="38"
-            height="38"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M3 4.5h18M3 9.5h18M3 14.5h18M3 19.5h18"
-              stroke="#ffffff"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            ></path>
-          </svg>
-        )}
-      </button>
-      <div className={`xl:hidden MobileLinks ${Open ? "" : "hidden"} `}>
         {Links.map((link) => (
           <Link
             href={link.url}
