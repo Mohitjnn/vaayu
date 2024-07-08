@@ -14,28 +14,28 @@ export default async function School() {
   return (
     <main>
       <center className="w-full h-fit">
-        <ParallaxScroll>
-          <section className="relative w-full h-[50vh] lg:h-[80vh] flex items-center">
-            <div className="absolute w-full h-fit z-0">
+        <section className="relative w-full h-[50vh] lg:h-[80vh] flex items-center">
+          <div className="absolute w-full h-fit z-0">
+            <ParallaxScroll>
               <div className="relative w-full h-[50vh] lg:h-[80vh]">
                 <ImageCarousel images={response.schoolPageImages.Carousel} />
               </div>
-            </div>
-            <div
-              className="relative w-full h-full flex justify-center xl:justify-evenly items-center flex-col z-20 xl:space-y-8 py-10 xl:py-40 px-4 xl:px-60"
-              style={{ textShadow: "4px 2px 13px black" }}
-            >
-              <TransitionVertical>
-                <h1 className="text-pretty xl:text-center Title text-white xl:leading-relaxed xl:my-4">
-                  GOOD NEWS
-                </h1>
-                <p className="subHeading text-white">
-                  WE NOW PROVIDE COACHES TO SCHOOLS AS WELL
-                </p>
-              </TransitionVertical>
-            </div>
-          </section>
-        </ParallaxScroll>
+            </ParallaxScroll>
+          </div>
+          <div
+            className="relative w-full h-full flex justify-center xl:justify-evenly items-center flex-col z-20 xl:space-y-8 py-10 xl:py-40 px-4 xl:px-60"
+            style={{ textShadow: "4px 2px 13px black" }}
+          >
+            <TransitionVertical>
+              <h1 className="text-pretty xl:text-center Title text-white xl:leading-relaxed xl:my-4">
+                GOOD NEWS
+              </h1>
+              <p className="subHeading text-white">
+                WE NOW PROVIDE COACHES TO SCHOOLS AS WELL
+              </p>
+            </TransitionVertical>
+          </div>
+        </section>
         <section className="relative z-20 bg-white flex flex-col-reverse items-center justify-center h-fit lg:flex-col w-full xl:px-20 lg:px-10 pt-16 xl:py-6 ">
           <div className="flex w-full lg:flex-col flex-col h-fit justify-between">
             <h1 className="Title text-blue-900  ">Our Coaches</h1>

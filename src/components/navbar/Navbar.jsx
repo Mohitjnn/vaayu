@@ -16,18 +16,31 @@ function Navbar() {
   const pathname = usePathname();
   const [Open, setOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(pathname);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setActiveLink(pathname);
   }, [pathname]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    handleResize(); // Check on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
       className={`w-full flex flex-row-reverse xl:flex-row justify-between items-between xl:items-center px-4 lg:px-8 xl:px-14 z-30 h-fit bg-black/20 backdrop-blur-[10px] text-white 
         ${
-          pathname === "/" || pathname === "/schools" || pathname === "/about"
+          pathname === "/" ||
+          pathname === "/schools" ||
+          (pathname === "/about" && isMobile)
             ? "fixed "
-            : "sticky "
+            : "sticky top-0"
         }
       `}
     >
@@ -92,12 +105,12 @@ function Navbar() {
           </svg>
         )}
       </button>
-      <div className={`xl:hidden MobileLinks  ${Open ? "" : "hidden"} `}>
+      <div className={`xl:hidden MobileLinks ${Open ? "" : "hidden"} `}>
         {Links.map((link) => (
           <Link
             href={link.url}
             key={link.url}
-            className={`text-xl font-semibold hover:underline underline-offset-4 ${
+            className={`text-xl font-medium hover:underline underline-offset-4 ${
               activeLink === link.url ? "text-blue-400 underline" : ""
             }`}
             onClick={() => {
@@ -105,9 +118,7 @@ function Navbar() {
               setActiveLink(link.url);
             }}
           >
-            <TransitionVertical key={link.url}>
-              • {link.name}
-            </TransitionVertical>
+            <TransitionVertical key={link.url}>{link.name}</TransitionVertical>
           </Link>
         ))}
       </div>
