@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import TransitionVertical from "@/animations/transitionVertical";
 
 const Links = [
   { name: "Home", url: "/" },
@@ -124,7 +123,7 @@ function Navbar() {
               setActiveLink(link.url);
             }}
           >
-            <TransitionVertical key={link.url}>{link.name}</TransitionVertical>
+            {link.name}
           </Link>
         ))}
       </div>
