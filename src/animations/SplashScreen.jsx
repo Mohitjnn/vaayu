@@ -1,7 +1,6 @@
 "use client";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 
 export default function SplashScreen({ finishLoading }) {
   const controls = useAnimation();
@@ -13,22 +12,20 @@ export default function SplashScreen({ finishLoading }) {
       .start({
         opacity: [0, 1],
         transition: {
-          duration: 2,
+          duration: 1.5,
           ease: "easeInOut",
         },
       })
       .then(() =>
-        setTimeout(() => {
-          parentControls
-            .start({
-              opacity: 0,
-              transition: {
-                duration: 1,
-                ease: "easeInOut",
-              },
-            })
-            .then(() => finishLoading());
-        }, 1000)
+        parentControls
+          .start({
+            opacity: 0,
+            transition: {
+              duration: 1,
+              ease: "easeInOut",
+            },
+          })
+          .then(() => finishLoading())
       );
   };
 
@@ -42,7 +39,7 @@ export default function SplashScreen({ finishLoading }) {
 
   return (
     <motion.div
-      className="w-screen h-screen flex items-center justify-center"
+      className="w-screen h-screen flex items-center justify-center "
       initial={{ opacity: 1 }}
       animate={parentControls}
     >
@@ -51,10 +48,12 @@ export default function SplashScreen({ finishLoading }) {
           id="logo"
           initial={{ opacity: 0 }}
           animate={controls}
-          className="flex items-center justify-center flex-col"
+          className="flex items-center justify-center flex-col p-4"
         >
-          <h1 className="Title font-black text-blue-900">VAAYUNSPORTS.COM</h1>
-          <h1 className="Heading font-normal text-blue-900">
+          <h1 className="Heading lg:Title font-black text-blue-900">
+            VAAYUNSPORTS.COM
+          </h1>
+          <h1 className="subHeading lg:Heading font-normal text-blue-900">
             Enhancing physical education
           </h1>
         </motion.div>
