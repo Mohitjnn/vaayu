@@ -36,8 +36,7 @@ const ImageCarousel = ({ images = [] }) => {
             alt={image.title}
             priority={true}
             fill={true}
-            objectFit="cover"
-            className="w-full h-full"
+            className="w-full h-full object-cover"
           />
         </div>
       ))}

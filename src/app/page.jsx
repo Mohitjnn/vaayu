@@ -40,8 +40,8 @@ export default async function Home() {
         </section>
         <section className="relative z-20 bg-white flex flex-col-reverse items-center justify-center h-fit lg:flex-col w-full xl:px-20 lg:px-10 pt-16 xl:py-20">
           <div className="flex w-full lg:flex-row-reverse flex-col h-fit justify-between">
-            <h1 className="lg:hidden Title text-blue-900 pb-4">ABOUT US</h1>
-            <div className="lg:w-[50%] xl:w-[40%] px-4 relative h-[40vh] lg:h-[75vh] xl:h-[75vh]">
+            <h1 className="lg:hidden Title text-blue-900">ABOUT US</h1>
+            <div className="lg:w-[50%] xl:w-[40%] px-4 relative h-[40vh] lg:h-[75vh] xl:h-[75vh] hidden lg:block">
               <Image
                 src="/static/images/AboutUsPicture.png"
                 layout="fill"
@@ -49,7 +49,7 @@ export default async function Home() {
                 alt="about us picture"
               />
             </div>
-            <div className="flex flex-col space-y-8 px-8 lg:px-4 mt-10 lg:my-0 lg:w-[45%] xl:w-[45%] justify-between items-center lg:items-start xl:justify-left text-justify">
+            <div className="flex flex-col space-y-8 px-8 lg:px-4 lg:mt-10 lg:my-0 lg:w-[45%] justify-between items-center lg:items-start xl:justify-left text-justify">
               <TransitionVertical>
                 <h1 className="hidden lg:block Title text-blue-900">
                   ABOUT US
