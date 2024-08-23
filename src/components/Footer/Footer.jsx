@@ -5,18 +5,24 @@ import Link from "next/link";
 function Footer() {
   return (
     <div className="w-full bg-blue-500 mt-8  py-8  h-full xl:px-14 bottom-0 flex flex-col lg:flex-row justify-between items-center text-white">
-      <div className="flex flex-col items-center justify-between w-full h-fit space-y-2 lg:space-y-1 lg:px-16">
-        <Image src="/static/images/logoWhite.png" height={10} width={60} />
+      <div className="flex flex-col items-center w-full h-fit space-y-2 lg:space-y-1 lg:px-16">
+        <Image
+          src="/static/images/VaayunImage-removebg-preview.png"
+          height={100}
+          width={100}
+          className="object-fill scale-[1.75]"
+        />
         <h1 className="Heading md:Title font-semibold lg:subHeading text-center">
           VAAYUN
         </h1>
         <div className="text text-center font-normal opacity-65 px-4 md:space-y-4 lg:space-y-0 pb-2">
-          <p>Developed by</p>
           <Link
+            Developed
+            by
             href="https://www.linkedin.com/in/mohit-jain-197515254/"
             target="_blank"
           >
-            Mohit Jain
+            Developed By Mohit Jain
           </Link>
           <p className="text font-normal text-center ">
             @2024 | Vaayun | All Rights Reserved

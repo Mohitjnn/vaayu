@@ -1,6 +1,7 @@
 "use client";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function SplashScreen({ finishLoading }) {
   const controls = useAnimation();
@@ -50,6 +51,12 @@ export default function SplashScreen({ finishLoading }) {
           animate={controls}
           className="flex items-center justify-center flex-col p-4"
         >
+          <Image
+            src={"/static/images/VaayunImage-removebg-preview.png"}
+            height={400}
+            width={400}
+            className="object-contain bg-white"
+          />
           <h1 className="Heading lg:Title font-black text-blue-900">
             VAAYUNSPORTS.COM
           </h1>
