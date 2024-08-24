@@ -5,6 +5,10 @@ import TransitionVertical from "@/animations/transitionVertical";
 import ImageCarousel from "@/components/Carousel/ImageCarousel";
 import ParallaxScroll from "@/animations/ParallaxScroll";
 
+export const metadata = {
+  title: "Schools",
+};
+
 export default async function School() {
   const response = await getData();
 

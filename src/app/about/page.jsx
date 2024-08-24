@@ -5,6 +5,10 @@ import CardFlip from "@/animations/cardFlip";
 import TransitionVertical from "@/animations/transitionVertical";
 import ParallaxScroll from "@/animations/ParallaxScroll";
 
+export const metadata = {
+  title: "About us",
+};
+
 const About = async () => {
   const response = await getData();
 

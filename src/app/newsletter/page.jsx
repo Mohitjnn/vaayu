@@ -2,6 +2,10 @@ import React from "react";
 import NewsContent from "@/components/NewsLetterContent/NewsContent";
 import getData from "@/customHook/datafetch";
 
+export const metadata = {
+  title: "newsletter",
+};
+
 async function Newsletter() {
   const response = await getData();
 

@@ -8,9 +8,15 @@ import SplashScreenManager from "@/helper/SplashScreenManager";
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700", "900"] });
 
 export const metadata = {
-  title: "Vaayun",
+  title: {
+    default: "Vaayun",
+    template: "%s - Vaayun",
+  },
   description:
     "Empowering The next generation of athletes: Revolutionizing sports education",
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({ children }) {
