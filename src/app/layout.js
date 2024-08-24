@@ -14,6 +14,23 @@ export const metadata = {
   },
   description:
     "Empowering The next generation of athletes: Revolutionizing sports education",
+  keywords: [
+    "Vaayun",
+    "Sports",
+    "Education",
+    "Athletes",
+    "Revolutionizing",
+    "sports education",
+    "athlete training",
+    "youth sports",
+    "sports coaching",
+    "fitness",
+    "sports development",
+    "athlete empowerment",
+    "sports technology",
+    "sports resources",
+    "athlete support",
+  ],
 };
 
 export default function RootLayout({ children }) {
