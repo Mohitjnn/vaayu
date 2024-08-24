@@ -14,8 +14,33 @@ export const metadata = {
   },
   description:
     "Empowering The next generation of athletes: Revolutionizing sports education",
+  openGraph: {
+    url: "https://vaayu-one.vercel.app/",
+    type: "website",
+    title: "Vaayun",
+    description:
+      "Empowering The next generation of athletes: Revolutionizing sports education",
+    images: [
+      {
+        url: "https://opengraph.b-cdn.net/production/images/252f37cf-c793-439f-8f12-b4bb468ad7ae.png?token=8a1w5iNAGbYSlLS5oEY1QyRerB7b_gXEvFYgxzKaSCI&height=630&width=1200&expires=33260500366",
+        width: 1200,
+        height: 630,
+        alt: "Vaayun - Empowering The next generation of athletes",
+      },
+    ],
+  },
   twitter: {
     card: "summary_large_image",
+    domain: "vaayu-one.vercel.app",
+    url: "https://vaayu-one.vercel.app/",
+    title: "Vaayun",
+    description:
+      "Empowering The next generation of athletes: Revolutionizing sports education",
+    images: [
+      {
+        url: "https://opengraph.b-cdn.net/production/images/252f37cf-c793-439f-8f12-b4bb468ad7ae.png?token=8a1w5iNAGbYSlLS5oEY1QyRerB7b_gXEvFYgxzKaSCI&height=630&width=1200&expires=33260500366",
+      },
+    ],
   },
 };
 
