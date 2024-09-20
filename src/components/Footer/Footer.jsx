@@ -56,7 +56,7 @@ function Footer() {
                 strokeLinejion="round"
               ></path>
             </svg>
-            <p>Creedaindiasports@gmail.com</p>
+            <p>vaayunsports@gmail.com</p>
           </div>
           <div className="w-full flex space-x-4 my-2 items-center ">
             <svg

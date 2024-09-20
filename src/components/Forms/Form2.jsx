@@ -3,9 +3,7 @@ import { useFormik } from "formik";
 import { basicSchema2 } from "@/schemas";
 import TransitionVertical from "@/animations/transitionVertical";
 
-const formUrl =
-  "https://script.google.com/macros/s/AKfycbzIDO9WfxaGMHtttPfKg5roVUERVKMrht19l32tAhpyCJQANxCgbooxcBZn02D5Ifs/exec";
-
+const formUrl = process.env.NEXT_PUBLIC_FORM_URL;
 function Form2({ scrollToForm }) {
   const [successMessage, setSuccessMessage] = useState("");
 
