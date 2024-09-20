@@ -32,7 +32,6 @@ function Form1({ scrollToForm }) {
           .then((response) => {
             if (response.ok) {
               setSuccessMessage("Form submitted successfully!");
-              console.log(response);
               resetForm();
             } else {
               setSuccessMessage("Form submission failed. Please try again.");
