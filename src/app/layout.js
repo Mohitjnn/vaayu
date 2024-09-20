@@ -8,68 +8,46 @@ import SplashScreenManager from "@/helper/SplashScreenManager";
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700", "900"] });
 
 export const metadata = {
-  title: {
-    default: "Vaayun",
-    template: "%s - Vaayun",
-  },
+  title:
+    "Vaayaun Sports Academy|Your entryway to top-notch athletic training|Discover world-class facilities with https://www.vaayunsports.com/",
   description:
-    "Empowering The next generation of athletes: Revolutionizing sports education",
+    "The top sports academies in Mumbai cover a wide range of sports, including football, tennis, badminton, hockey, athletics, and more.",
   keywords: [
-    "Vaayun",
-    "Sports",
-    "Education",
-    "Athletes",
-    "Revolutionizing",
-    "sports education",
-    "athlete training",
+    "athletics academy near me",
+    "sports academy website",
+    "Best sports education website",
+    "academy sports",
+    "academy",
+    "academy sports academy near me",
+    "sports academies near me",
+    "website for sports academy",
+    "academy sports near me",
+    "academy sports near my location",
+    "sport academies near me",
+    "Best sports education website",
+    "academy sports outdoors",
+    "sporting goods near me",
+    "cricket training",
+    "best sports academy near me",
+    "top educational sports website",
+    "sports academy",
     "youth sports",
-    "sports coaching",
-    "fitness",
-    "sports development",
-    "athlete empowerment",
-    "sports technology",
-    "sports resources",
-    "athlete support",
+    "best football training academy",
+    "sports academy website",
+    "website for sports academy",
+    "academy sports and outdoors",
+    "best sports academy",
+    "best sports coaching near me",
+    "best sports academy near me",
+    "website for sports and youth",
   ],
+  canonical: "https://www.vaayunsports.com/",
+  robots: "index, follow",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <title>Vaayun</title>
-        <meta
-          name="description"
-          content="Empowering The next generation of athletes: Revolutionizing sports education"
-        />
-
-        {/* Facebook Meta Tags */}
-        <meta property="og:url" content="https://vaayu-one.vercel.app/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Vaayun" />
-        <meta
-          property="og:description"
-          content="Empowering The next generation of athletes: Revolutionizing sports education"
-        />
-        <meta
-          property="og:image"
-          content="https://opengraph.b-cdn.net/production/images/252f37cf-c793-439f-8f12-b4bb468ad7ae.png?token=8a1w5iNAGbYSlLS5oEY1QyRerB7b_gXEvFYgxzKaSCI&height=630&width=1200&expires=33260500366"
-        />
-
-        {/* Twitter Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="vaayu-one.vercel.app" />
-        <meta property="twitter:url" content="https://vaayu-one.vercel.app/" />
-        <meta name="twitter:title" content="Vaayun" />
-        <meta
-          name="twitter:description"
-          content="Empowering The next generation of athletes: Revolutionizing sports education"
-        />
-        <meta
-          name="twitter:image"
-          content="https://opengraph.b-cdn.net/production/images/252f37cf-c793-439f-8f12-b4bb468ad7ae.png?token=8a1w5iNAGbYSlLS5oEY1QyRerB7b_gXEvFYgxzKaSCI&height=630&width=1200&expires=33260500366"
-        />
-      </head>
       <body className={`${poppins.className} w-full h-full scroll-smooth`}>
         <PolyfillProvider>
           <SplashScreenManager>

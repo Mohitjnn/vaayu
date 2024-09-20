@@ -68,7 +68,7 @@ export default async function Home() {
               </TransitionVertical>
               <TransitionVertical>
                 <button className="Btnlight text mt-4">
-                  <Link href="/about">More</Link>
+                  <Link href={`${process.env.NEXT_PUBLIC_URL}about`}>More</Link>
                 </button>
               </TransitionVertical>
             </div>
@@ -86,7 +86,9 @@ export default async function Home() {
               <DotCarousel Reasons={response?.newsletterContent} />
             </div>
             <button className="Btnlight text">
-              <Link href="/newsletter">BROWSE NEWSLETTER</Link>
+              <Link href={`${process.env.NEXT_PUBLIC_URL}newsletter`}>
+                BROWSE NEWSLETTER
+              </Link>
             </button>
           </section>
         </TransitionVertical>

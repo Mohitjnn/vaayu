@@ -6,7 +6,32 @@ import ImageCarousel from "@/components/Carousel/ImageCarousel";
 import ParallaxScroll from "@/animations/ParallaxScroll";
 
 export const metadata = {
-  title: "Schools",
+  title:
+    "School Coach Hire | Professional athlete provider only at https://www.vaayunsports.com/schools",
+  keywords: [
+    "coaches for schools",
+    "best provider coaches",
+    "best trainers for soccer",
+    "coaches for school",
+    "best coach hiring website",
+    "football coaches for school",
+    "best coaches for volleyball",
+    "coaches provider for sports",
+    "school coaches provider",
+    "school coaches provider",
+    "best coaches provider near me",
+    "best coaches near me",
+    "best hiring websites for coaches",
+    "best provider coaches for football",
+    "best coaches provider website",
+    "coaches for professional training",
+    "best coaches for school",
+    "school coaches providers",
+    "school coach provider",
+    "trainers of professional training",
+  ],
+  robots: "index,follow",
+  canonical: "",
 };
 
 export default async function School() {
@@ -32,11 +57,12 @@ export default async function School() {
           >
             <TransitionVertical>
               <h1 className="text-pretty xl:text-center Title text-white xl:leading-relaxed xl:my-4">
-                GOOD NEWS
+                WE OFFER TOP-TIER COACHING
               </h1>
-              <p className="subHeading text-white">
-                WE NOW PROVIDE COACHES TO SCHOOLS AS WELL
-              </p>
+              <h2 className="subHeading text-white">
+                {/* We empower children to realize their full potential */}
+                WE EMPOWER CHILDREN TO REALISE THEIR FULL POTENTIAL
+              </h2>
             </TransitionVertical>
           </div>
         </section>
