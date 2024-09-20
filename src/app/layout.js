@@ -9,7 +9,7 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700", "900"] });
 
 export const metadata = {
   title:
-    "Vaayaun Sports Academy|Your entryway to top-notch athletic training|Discover world-class facilities with https://www.vaayunsports.com/",
+    "Vaayun Sports Academy | Your entry way to top-notch athletic training|Discover world-class facilities with https://www.vaayunsports.com/",
   description:
     "The top sports academies in Mumbai cover a wide range of sports, including football, tennis, badminton, hockey, athletics, and more.",
   keywords: [

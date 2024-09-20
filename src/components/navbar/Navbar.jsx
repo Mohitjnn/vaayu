@@ -4,11 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Links = [
-  { name: "Home", url: process.env.NEXT_PUBLIC_URL },
-  { name: "About Us", url: `${process.env.NEXT_PUBLIC_URL}/about` },
-  { name: "NewsLetter", url: `${process.env.NEXT_PUBLIC_URL}/newsletter` },
-  { name: "Schools", url: `${process.env.NEXT_PUBLIC_URL}/schools` },
-  { name: "Contact Us", url: `${process.env.NEXT_PUBLIC_URL}/contact` },
+  { name: "Home", url: "/" },
+  { name: "About Us", url: "/about" },
+  { name: "NewsLetter", url: "/newsletter" },
+  { name: "Schools", url: "/schools" },
+  { name: "Contact Us", url: "/contact" },
 ];
 
 function Navbar() {
