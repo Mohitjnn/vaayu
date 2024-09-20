@@ -1,0 +1,10 @@
+User-agent:*
+allow 
+
+https://www.vaayunsports.com/
+https://www.vaayunsports.com/newsletter
+https://www.vaayunsports.com/schools
+https://www.vaayunsports.com/about
+https://www.vaayunsports.com/contact
+
+
