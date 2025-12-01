@@ -9,6 +9,7 @@ const Links = [
   { name: "NewsLetter", url: "/newsletter" },
   { name: "Schools", url: "/schools" },
   { name: "Contact Us", url: "/contact" },
+  { name: "Certificates", url: "/certificates" }
 ];
 
 function Navbar() {
