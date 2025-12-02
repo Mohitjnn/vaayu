@@ -52,7 +52,7 @@ export default function SplashScreen({ finishLoading }) {
           className="flex items-center justify-center flex-col p-4"
         >
           <Image
-            src={"/static/images/VaayunImage-removebg-preview.png"}
+            src={"/static/images/VaayunLogo.png"}
             height={400}
             width={400}
             className="object-contain bg-white"

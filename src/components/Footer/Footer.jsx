@@ -7,10 +7,10 @@ function Footer() {
     <div className="w-full bg-blue-500 mt-8  py-8  h-full xl:px-14 bottom-0 flex flex-col lg:flex-row justify-between items-center text-white">
       <div className="flex flex-col items-center w-full h-fit space-y-2 lg:space-y-1 lg:px-16">
         <Image
-          src="/static/images/VaayunImage-removebg-preview.png"
+          src="/static/images/VaayunLogo.png"
           height={100}
           width={100}
-          className="object-fill scale-[1.75]"
+          className="object-fill"
         />
         <h1 className="Heading md:Title font-semibold lg:subHeading text-center">
           VAAYUN

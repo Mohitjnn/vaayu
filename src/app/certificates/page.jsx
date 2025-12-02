@@ -22,9 +22,9 @@ export const metadata = {
 const certificates = [
   {
     id: 1,
-    title: "Vaayun Cup 2025",
-    description: "Download certificate for printing - Vaayun Cup 2025 Certificate",
-    downloadUrl: "/static/certificates/VaayunCup2025.pdf"
+    title: "Vaayun Cup",
+    description: "Download certificate for printing - Vaayun Cup Certificate",
+    downloadUrl: "/static/certificates/VaayunCup.pdf"
   }
 ];
 
