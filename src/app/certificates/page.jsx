@@ -2,8 +2,8 @@ import React from 'react'
 import CertificateCard from "@/components/Certificates/CertificateCard";
 
 export const metadata = {
-  title: "Certificates | Vaayun Sports Academy - Download Training Certifications",
-  description: "Download official certificates from Vaayun Sports Academy. Access your coaching certifications, training completion certificates, and sports qualifications.",
+  title: "Certificates | Vaayun Sports Academy - Download Certifications",
+  description: "Download official certificates from Vaayun Sports Academy. Access your sports event certificates in PDF format for easy printing and sharing.",
   keywords: [
     "sports certificates",
     "coaching certification",
