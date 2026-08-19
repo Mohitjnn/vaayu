@@ -74,43 +74,46 @@ const About = async () => {
         <TransitionVertical>
           <section className=" relative w-full bg-white h-fit space-y-6 xl:px-16 py-16 flex flex-col items-center z-20">
             <h1 className="Title text-blue-900">Founders</h1>
-            <div className="flex lg:flex-row flex-col w-full h-fit justify-between items-start space-y-16 lg:space-y-0 xl:space-x-6">
+            <div className="flex flex-col w-full h-fit gap-16 lg:gap-8">
               {response.Founders.map((Founder, index) => (
-                <div
-                  className="flex flex-col w-full lg:w-1/2 px-8 lg:px-0 items-center justify-center space-y-8"
-                  key={index}
-                >
-                  <CardFlip>
-                    <div className="w-[80vw] lg:w-[60vh] relative h-[70vh] lg:h-[80vh] px-6 ">
-                      <Image
-                        src={`/static/images/Founder${index + 1}.png`}
-                        priority={true}
-                        fill={true}
-                        alt={Founder.name}
-                        className="lg:rounded-xl object-cover"
-                      />
-                    </div>
-                  </CardFlip>
-                  <TransitionVertical>
-                    <div className="text-pretty w-full ">
-                      <h1 className="Heading lg:subHeading mb-4">
+                <TransitionVertical key={index}>
+                  <div
+                    className={`flex flex-col w-full items-center gap-8 lg:gap-4 px-4 lg:px-8 ${
+                      index % 2 === 0
+                        ? "lg:flex-row"
+                        : "lg:flex-row-reverse"
+                    }`}
+                  >
+                    <CardFlip>
+                      <div className="w-[80vw] lg:w-[50vh] shrink-0 relative h-[70vh] lg:h-[70vh]">
+                        <Image
+                          src={Founder.image}
+                          priority={true}
+                          fill={true}
+                          alt={Founder.name}
+                          className="rounded-xl object-cover"
+                        />
+                      </div>
+                    </CardFlip>
+                    <div
+                      className={`text-pretty w-full lg:w-auto flex-1 ${
+                        index % 2 === 0 ? "lg:text-left" : "lg:text-right"
+                      } text-center`}
+                    >
+                      <h1 className="Heading lg:subHeading mb-2">
                         {Founder.name}
                       </h1>
-                      <h1 className="Heading lg:subHeading mb-4">
+                      <h1 className="Heading lg:subHeading mb-4 text-blue-600">
                         {Founder.Title}
                       </h1>
-                      <div className="font-normal leading-relaxed text text-center w-full xl:px-16 ">
-                        <TransitionVertical>
-                          {Founder.achievements.map((achievement, idx) => (
-                            <p key={idx} className="my-2">
-                              {achievement}
-                            </p>
-                          ))}
-                        </TransitionVertical>
+                      <div className="font-normal leading-relaxed text space-y-2">
+                        {Founder.achievements.map((achievement, idx) => (
+                          <p key={idx}>{achievement}</p>
+                        ))}
                       </div>
                     </div>
-                  </TransitionVertical>
-                </div>
+                  </div>
+                </TransitionVertical>
               ))}
             </div>
           </section>

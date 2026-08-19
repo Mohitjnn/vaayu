@@ -7,7 +7,7 @@ function Footer() {
     <div className="w-full bg-blue-500 mt-8  py-8  h-full xl:px-14 bottom-0 flex flex-col lg:flex-row justify-between items-center text-white">
       <div className="flex flex-col items-center w-full h-fit space-y-2 lg:space-y-1 lg:px-16">
         <Image
-          src="/static/images/VaayunLogo.png"
+          src="/static/images/VaayunLogoNew.png"
           height={100}
           width={100}
           className="object-fill"

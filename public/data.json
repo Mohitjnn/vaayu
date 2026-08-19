@@ -65,6 +65,7 @@
     {
       "name": "Dhananjay Thakur",
       "Title": "CEO, CO-FOUNDER",
+      "image": "/static/images/Founder1.png",
       "achievements": [
         "Renowned player, coach, and mentor in handball.",
         "Represented the Indian national handball team with pride.",
@@ -76,12 +77,26 @@
     {
       "name": "Abhishek Pandey",
       "Title": "CFO, CO-FOUNDER",
+      "image": "/static/images/Founder2.png",
       "achievements": [
         "Renowned for representing the Indian handball team internationally.",
         "Known for speed, strategy, and agility in national championships.",
         "Recipient of the India Sports Award for handball excellence.",
         "Exemplifies excellence, dedication, and passion for sports.",
         "Inspires athletes, securing a place in Indian sports history."
+      ]
+    },
+    {
+      "name": "Rapravesh Yadav",
+      "Title": "COO",
+      "image": "/static/images/Founder3.jpeg",
+      "achievements": [
+        "International handball player representing India on the global stage.",
+        "Secretary, Mumbai Handball Academy — shaping the future of handball.",
+        "National Team Coach, guiding India's finest handball talent.",
+        "Handball Secretary, Palghar District.",
+        "Nine-a-Side Football Secretary, Thane District.",
+        "Dodgeball Secretary, Thane District."
       ]
     }
   ],
@@ -152,11 +167,18 @@
   ],
   "schoolPageImages": {
     "Carousel": [
-      { "title": "image3", "Url": "/static/images/schoolsImage3.png" },
-      { "title": "image4", "Url": "/static/images/schoolsImage2.png" },
-      { "title": "image1", "Url": "/static/images/AboutUsPicture2.jpg" },
-      { "title": "image5", "Url": "/static/images/schoolsImage5.png" },
-      { "title": "image6", "Url": "/static/images/schoolsImage4.png" }
+      { "title": "School Activity 2", "Url": "/static/images/schoolActivity2.jpeg" },
+      { "title": "School Activity 4", "Url": "/static/images/schoolActivity4.jpeg" },
+      { "title": "School Activity 5", "Url": "/static/images/schoolActivity5.jpeg" },
+      { "title": "School Activity 6", "Url": "/static/images/schoolActivity6.jpeg" },
+      { "title": "School Activity 7", "Url": "/static/images/schoolActivity7.jpeg" },
+      { "title": "School Activity 8", "Url": "/static/images/schoolActivity8.jpeg" },
+      { "title": "School Activity 9", "Url": "/static/images/schoolActivity9.jpeg" },
+      { "title": "School Activity 10", "Url": "/static/images/schoolActivity10.jpeg" },
+      { "title": "School Activity 11", "Url": "/static/images/schoolActivity11.jpeg" },
+      { "title": "School Activity 12", "Url": "/static/images/schoolActivity12.jpeg" },
+      { "title": "School Activity 13", "Url": "/static/images/schoolActivity13.jpeg" },
+      { "title": "School Activity 14", "Url": "/static/images/schoolActivity14.jpeg" }
     ],
     "coachImage1": {
       "title": "image1",
@@ -167,9 +189,56 @@
       "Url": "/static/images/schoolsImage1.png"
     }
   },
-  "schoolPageData": [
-    "At Vaayu, our coaches are the cornerstone of our sports  education and training programs, bringing a wealth of  experience and a passion for nurturing young talent. Each  coach at Vaayu boasts between 5 to 10 years of hands-on  experience in their respective sports disciplines.",
-    "Our coaches are not just experienced; they are also highly  decorated, having won numerous awards at the national level  and represented our country in various international  competitions. Our team of coaches is dedicated to delivering a  comprehensive sports education that helps students develop  their skills, enhance their fitness levels, and learn  essential life skills.They are adept at working with students  of all ages and skill levels, ensuring that every individual  receives personalized attention and guidance.",
-    "At Vaayu, we believe that top-tier sports training should be  accessible to all. Our primary mission is to provide  national-level coaching at a minimal cost, ensuring that every  aspiring athlete has the opportunity to achieve their full  potential. Our coaches are committed to this vision, working  tirelessly to offer the highest quality training without the  hefty price tag."
-  ]
+  "schoolPageData": {
+    "during": {
+      "title": "During School Program",
+      "subtitle": "Transforming School Sports Into a Culture of Excellence",
+      "intro": "At Vaayun, we don't just conduct sports periods—we build an ecosystem where every student gets the opportunity to discover their potential. Our structured in-school sports program combines professional coaching, scientific training methods, and performance tracking to create an engaging and results-driven learning experience. Every session is designed to improve physical fitness, technical skills, confidence, discipline, teamwork, and leadership while making sports an integral part of school education.",
+      "sectionHeading": "What Makes Our Program Different?",
+      "highlights": [
+        "Professional Coaches with Real Match Experience",
+        "Structured Annual Sports Curriculum",
+        "Skill-Based Learning for Every Age Group",
+        "Performance Evaluation & Progress Reports",
+        "Inter-House & Inter-School Competition Preparation",
+        "Fitness, Coordination & Motor Skill Development",
+        "Character Building Through Sports"
+      ],
+      "closing": "We don't simply train students. We help schools build a lasting sporting culture.",
+      "images": [
+        "/static/images/schoolActivity9.jpeg",
+        "/static/images/schoolActivity15.jpeg",
+        "/static/images/schoolActivity3.jpeg"
+      ]
+    },
+    "after": {
+      "title": "After School Program",
+      "subtitle": "Where Passion Meets Performance",
+      "intro": "Some students play sports. Some dream of becoming champions. Our After School Program is created for athletes who want to go beyond the classroom and push their limits under professional guidance. With focused coaching, advanced drills, fitness development, and competitive exposure, we prepare athletes for the next level of performance. Whether the goal is improving skills, representing the school, or competing at district, state, or national level—we provide the right pathway.",
+      "sectionHeading": "Inside The Program",
+      "highlights": [
+        "High Performance Coaching",
+        "Sport-Specific Skill Development",
+        "Strength, Speed & Agility Training",
+        "Tactical & Match Awareness Sessions",
+        "Performance Analytics",
+        "Tournament Exposure",
+        "Individual Athlete Development Plans",
+        "Goal-Oriented Coaching"
+      ],
+      "closing": "Because greatness is built after the school bell rings.",
+      "images": [
+        "/static/images/schoolActivity8.jpeg",
+        "/static/images/schoolActivity12.jpeg",
+        "/static/images/schoolActivity6.jpeg"
+      ]
+    },
+    "why": {
+      "title": "Why Vaayun?",
+      "subtitle": "More Than Coaching. A Complete Sports Development Partner.",
+      "body": "At Vaayun, we partner with schools to create sustainable sports programs that develop healthier students, stronger teams, and future champions. From grassroots participation to competitive excellence, our mission is to provide every child with the opportunity to learn, grow, and succeed through sports.",
+      "tagline": "Train Better. Play Smarter. Achieve More.",
+      "image": "/static/images/schoolActivity10.jpeg"
+    }
+  }
 }
